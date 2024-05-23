@@ -11,6 +11,7 @@ using FireSharp.Response;
 using FireSharp.Interfaces;
 using FireSharp.Config;
 using Firebase_Project;
+using System.Diagnostics.Eventing.Reader;
 namespace WallSheet
 {
     public partial class FormLogin : Form
@@ -44,7 +45,7 @@ namespace WallSheet
         }
         private void btnLogin_click_Click(object sender, EventArgs e)
         {
-
+            
             if (string.IsNullOrWhiteSpace(txbUserName.Text) ||
                string.IsNullOrWhiteSpace(txbPassword.Text))
             {
@@ -64,7 +65,7 @@ namespace WallSheet
             if (MyUser.IsEqual(ResUser, CurUser) == true)
             {
                 Phongcho phongcho = new Phongcho();
-                    phongcho.Hide();
+                this.Hide();
                 phongcho.Show();
             }
             else
@@ -80,9 +81,11 @@ namespace WallSheet
             reg.Hide();
             reg.Show();
 
-        }   
+        }
 
-       
-       
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

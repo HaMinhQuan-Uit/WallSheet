@@ -1,0 +1,153 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\H\u1ECDc T\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0110\u1ED3 \u00C1n 2\\WallSheet\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|e:\\h\u1ECDc t\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0111\u1ED3 \u00E1n 2\\wallsheet\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|e:\\h\u1ECDc t\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0111\u1ED3 \u00E1n 2\\wallsheet\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|e:\\h\u1ECDc t\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0111\u1ED3 \u00E1n 2\\wallsheet\\phongcho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:phongcho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|e:\\h\u1ECDc t\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0111\u1ED3 \u00E1n 2\\wallsheet\\phongcho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:phongcho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|e:\\h\u1ECDc t\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0111\u1ED3 \u00E1n 2\\wallsheet\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|e:\\h\u1ECDc t\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0111\u1ED3 \u00E1n 2\\wallsheet\\myuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:myuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|e:\\h\u1ECDc t\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0111\u1ED3 \u00E1n 2\\wallsheet\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|e:\\h\u1ECDc t\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0111\u1ED3 \u00E1n 2\\wallsheet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Phongcho.cs",
+              "DocumentMoniker": "E:\\H\u1ECDc T\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0110\u1ED3 \u00C1n 2\\WallSheet\\Phongcho.cs",
+              "RelativeDocumentMoniker": "Phongcho.cs",
+              "ToolTip": "E:\\H\u1ECDc T\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0110\u1ED3 \u00C1n 2\\WallSheet\\Phongcho.cs",
+              "RelativeToolTip": "Phongcho.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAqwCIAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T07:07:11.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Phongcho.cs [Design]",
+              "DocumentMoniker": "E:\\H\u1ECDc T\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0110\u1ED3 \u00C1n 2\\WallSheet\\Phongcho.cs",
+              "RelativeDocumentMoniker": "Phongcho.cs",
+              "ToolTip": "E:\\H\u1ECDc T\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0110\u1ED3 \u00C1n 2\\WallSheet\\Phongcho.cs [Design]",
+              "RelativeToolTip": "Phongcho.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T06:54:36.45Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cs",
+              "DocumentMoniker": "E:\\H\u1ECDc T\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0110\u1ED3 \u00C1n 2\\WallSheet\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "E:\\H\u1ECDc T\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0110\u1ED3 \u00C1n 2\\WallSheet\\Login.cs",
+              "RelativeToolTip": "Login.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAmwDsAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T06:13:59.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Registration.cs",
+              "DocumentMoniker": "E:\\H\u1ECDc T\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0110\u1ED3 \u00C1n 2\\WallSheet\\Registration.cs",
+              "RelativeDocumentMoniker": "Registration.cs",
+              "ToolTip": "E:\\H\u1ECDc T\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0110\u1ED3 \u00C1n 2\\WallSheet\\Registration.cs",
+              "RelativeToolTip": "Registration.cs",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAqwE4AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T06:40:26.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Registration.cs [Design]",
+              "DocumentMoniker": "E:\\H\u1ECDc T\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0110\u1ED3 \u00C1n 2\\WallSheet\\Registration.cs",
+              "RelativeDocumentMoniker": "Registration.cs",
+              "ToolTip": "E:\\H\u1ECDc T\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0110\u1ED3 \u00C1n 2\\WallSheet\\Registration.cs [Design]",
+              "RelativeToolTip": "Registration.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T06:14:29.864Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "E:\\H\u1ECDc T\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0110\u1ED3 \u00C1n 2\\WallSheet\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "E:\\H\u1ECDc T\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0110\u1ED3 \u00C1n 2\\WallSheet\\Login.cs [Design]",
+              "RelativeToolTip": "Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T06:02:48.807Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MyUser.cs",
+              "DocumentMoniker": "E:\\H\u1ECDc T\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0110\u1ED3 \u00C1n 2\\WallSheet\\MyUser.cs",
+              "RelativeDocumentMoniker": "MyUser.cs",
+              "ToolTip": "E:\\H\u1ECDc T\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0110\u1ED3 \u00C1n 2\\WallSheet\\MyUser.cs",
+              "RelativeToolTip": "MyUser.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAiwDEAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T06:14:18.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\H\u1ECDc T\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0110\u1ED3 \u00C1n 2\\WallSheet\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\H\u1ECDc T\u1EADp\\l\u1EADp_tr\u00ECnh_m\u1EA1ng\\\u0110\u1ED3 \u00C1n 2\\WallSheet\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T06:03:09.968Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
