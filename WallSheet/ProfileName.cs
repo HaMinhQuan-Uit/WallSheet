@@ -36,9 +36,6 @@ namespace WallSheet
         private void btn_Home_Click(object sender, EventArgs e)
         {
 
-            Phongcho phongcho = new Phongcho();
-            this.Hide();
-            phongcho.Show();
         }
 
         private void label2_Click_1(object sender, EventArgs e)
@@ -53,7 +50,6 @@ namespace WallSheet
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            pictureBox1.Image = new Bitmap(Application.StartupPath+ "\\Resources\\ ");
         }
 
         private void btnSend_click_Click(object sender, EventArgs e)
@@ -74,6 +70,14 @@ namespace WallSheet
             }
         }
 
+        private void btn_Chat_Click(object sender, EventArgs e)
+        {
+           Button btn = new Button();
+            btn.Text = " LogOut ";
+            btn.AutoSize = true;
+
+            panel2.Controls.Add(btn);
+        }
     }
 }
 

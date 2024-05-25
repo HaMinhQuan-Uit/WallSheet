@@ -27,5 +27,4 @@ E:\Học Tập\lập_trình_mạng\Đồ Án 2\WallSheet\obj\Debug\WallSheet.csp
 E:\Học Tập\lập_trình_mạng\Đồ Án 2\WallSheet\obj\Debug\WallSheet.csproj.Up2Date
 E:\Học Tập\lập_trình_mạng\Đồ Án 2\WallSheet\obj\Debug\WallSheet.exe
 E:\Học Tập\lập_trình_mạng\Đồ Án 2\WallSheet\obj\Debug\WallSheet.pdb
-E:\Học Tập\lập_trình_mạng\Đồ Án 2\WallSheet\obj\Debug\WallSheet.Phongcho.resources
 E:\Học Tập\lập_trình_mạng\Đồ Án 2\WallSheet\obj\Debug\WallSheet.ProfileName.resources

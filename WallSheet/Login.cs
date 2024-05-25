@@ -64,9 +64,9 @@ namespace WallSheet
 
             if (MyUser.IsEqual(ResUser, CurUser) == true)
             {
-                Phongcho phongcho = new Phongcho();
+                ProfileName profileName= new ProfileName();
                 this.Hide();
-                phongcho.Show();
+                profileName.Show();
             }
             else
             {

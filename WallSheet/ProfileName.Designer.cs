@@ -41,6 +41,8 @@
             this.btnSend_click = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.btnPVE_click = new System.Windows.Forms.Button();
+            this.btnPVP_Click = new System.Windows.Forms.Button();
             btn_Home = new System.Windows.Forms.Button();
             btn_Chat = new System.Windows.Forms.Button();
             btnSetting_Click = new System.Windows.Forms.Button();
@@ -78,6 +80,7 @@
             btn_Chat.TabIndex = 4;
             btn_Chat.Text = "Chat";
             btn_Chat.UseVisualStyleBackColor = false;
+            btn_Chat.Click += new System.EventHandler(this.btn_Chat_Click);
             // 
             // btnSetting_Click
             // 
@@ -199,12 +202,34 @@
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
+            // btnPVE_click
+            // 
+            this.btnPVE_click.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F);
+            this.btnPVE_click.Location = new System.Drawing.Point(410, 309);
+            this.btnPVE_click.Name = "btnPVE_click";
+            this.btnPVE_click.Size = new System.Drawing.Size(88, 41);
+            this.btnPVE_click.TabIndex = 2;
+            this.btnPVE_click.Text = "PVE";
+            this.btnPVE_click.UseVisualStyleBackColor = true;
+            // 
+            // btnPVP_Click
+            // 
+            this.btnPVP_Click.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F);
+            this.btnPVP_Click.Location = new System.Drawing.Point(410, 388);
+            this.btnPVP_Click.Name = "btnPVP_Click";
+            this.btnPVP_Click.Size = new System.Drawing.Size(88, 37);
+            this.btnPVP_Click.TabIndex = 3;
+            this.btnPVP_Click.Text = "PVP";
+            this.btnPVP_Click.UseVisualStyleBackColor = true;
+            // 
             // ProfileName
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WallSheet.Properties.Resources.cach_choi_ma_soi_1;
             this.ClientSize = new System.Drawing.Size(1318, 593);
+            this.Controls.Add(this.btnPVP_Click);
+            this.Controls.Add(this.btnPVE_click);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Name = "ProfileName";
@@ -232,5 +257,7 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnSend_click;
+        private System.Windows.Forms.Button btnPVE_click;
+        private System.Windows.Forms.Button btnPVP_Click;
     }
 }
