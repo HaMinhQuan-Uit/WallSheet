@@ -113,6 +113,36 @@ namespace WallSheet.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2024_05_24_223038 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2024-05-24 223038", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2024_05_24_223348 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2024-05-24 223348", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2024_05_24_223448 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2024-05-24 223448", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tải_xuống__1_ {
             get {
                 object obj = ResourceManager.GetObject("tải xuống (1)", resourceCulture);

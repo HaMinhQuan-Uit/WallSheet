@@ -30,14 +30,7 @@ namespace WallSheet
 
         private void label2_Click(object sender, EventArgs e)
         {
-            FirebaseResponse res = client.Get(@"Users/" + txbName.Text);
-            MyUser ResUser = res.ResultAs<MyUser>();
-
-            MyUser CurUser = new MyUser()
-            {
-                Username = txbName.Text,
-
-            };
+            
         }
 
         private void btn_Home_Click(object sender, EventArgs e)
@@ -47,6 +40,40 @@ namespace WallSheet
             this.Hide();
             phongcho.Show();
         }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            pictureBox1.Image = new Bitmap(Application.StartupPath+ "\\Resources\\ ");
+        }
+
+        private void btnSend_click_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProfileName_Load(object sender, EventArgs e)
+        {
+            this.KeyPreview = true;
+            this.KeyDown += ProfileName_KeyDown;
+        }
+        private void ProfileName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSend_click.PerformClick();
+            }
+        }
+
     }
 }
 

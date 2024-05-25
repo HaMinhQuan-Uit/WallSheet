@@ -114,7 +114,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txbUserName);
             this.panel1.Controls.Add(this.label2);
@@ -122,7 +122,7 @@
             this.panel1.Controls.Add(this.btnLogin_click);
             this.panel1.Controls.Add(this.btnResgiter_click);
             this.panel1.Controls.Add(this.txbPassword);
-            this.panel1.Location = new System.Drawing.Point(34, 87);
+            this.panel1.Location = new System.Drawing.Point(12, 87);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(357, 351);
             this.panel1.TabIndex = 7;
@@ -134,7 +134,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Impact", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.IndianRed;
-            this.label4.Location = new System.Drawing.Point(103, 14);
+            this.label4.Location = new System.Drawing.Point(116, 15);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(169, 75);
             this.label4.TabIndex = 7;
