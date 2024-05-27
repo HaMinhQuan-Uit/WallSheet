@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,6 +38,7 @@
             this.txbPassword = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,7 +81,7 @@
             // btnLogin_click
             // 
             this.btnLogin_click.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin_click.Location = new System.Drawing.Point(92, 241);
+            this.btnLogin_click.Location = new System.Drawing.Point(129, 268);
             this.btnLogin_click.Name = "btnLogin_click";
             this.btnLogin_click.Size = new System.Drawing.Size(99, 43);
             this.btnLogin_click.TabIndex = 3;
@@ -90,7 +92,7 @@
             // btnResgiter_click
             // 
             this.btnResgiter_click.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResgiter_click.Location = new System.Drawing.Point(242, 241);
+            this.btnResgiter_click.Location = new System.Drawing.Point(255, 268);
             this.btnResgiter_click.Name = "btnResgiter_click";
             this.btnResgiter_click.Size = new System.Drawing.Size(99, 43);
             this.btnResgiter_click.TabIndex = 4;
@@ -115,6 +117,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txbUserName);
             this.panel1.Controls.Add(this.label2);
@@ -140,6 +143,19 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Login";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Symbol", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.SeaShell;
+            this.label5.Location = new System.Drawing.Point(126, 221);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(129, 17);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Forgot Password?";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -149,7 +165,9 @@
             this.ClientSize = new System.Drawing.Size(734, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLogin";
             this.Load += new System.EventHandler(this.FormLogin_Load);
             this.panel1.ResumeLayout(false);
@@ -170,6 +188,7 @@
         private System.Windows.Forms.TextBox txbPassword;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 

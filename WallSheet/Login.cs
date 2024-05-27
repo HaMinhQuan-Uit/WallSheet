@@ -87,5 +87,12 @@ namespace WallSheet
         {
 
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SendCode sendCode = new SendCode();
+            sendCode.Show();
+        }
     }
 }
