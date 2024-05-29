@@ -66,7 +66,7 @@ namespace WallSheet
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnSend_click.PerformClick();
+               // btnSend_click.PerformClick();
             }
         }
 
@@ -77,6 +77,23 @@ namespace WallSheet
             btn.AutoSize = true;
 
             panel2.Controls.Add(btn);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private bool check;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (check)
+            {
+                panel1.Width += 10;
+               // if(panel1.Size = panel1.MaximumSize)
+                {
+                    pictureBox1.Left += 200;
+                }
+            }
         }
     }
 }

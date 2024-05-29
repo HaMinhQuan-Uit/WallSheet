@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Button btn_Home;
             System.Windows.Forms.Button btn_Chat;
             System.Windows.Forms.Button btnSetting_Click;
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnSend_click = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.btnPVE_click = new System.Windows.Forms.Button();
             this.btnPVP_Click = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             btn_Home = new System.Windows.Forms.Button();
             btn_Chat = new System.Windows.Forms.Button();
             btnSetting_Click = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_Home
@@ -99,6 +99,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -110,6 +111,13 @@
             this.panel1.Size = new System.Drawing.Size(362, 596);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(361, 5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(962, 587);
+            this.panel3.TabIndex = 3;
             // 
             // label3
             // 
@@ -163,49 +171,10 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.btnSend_click);
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Controls.Add(this.listView1);
-            this.panel3.Location = new System.Drawing.Point(929, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(390, 574);
-            this.panel3.TabIndex = 1;
-            // 
-            // btnSend_click
-            // 
-            this.btnSend_click.Image = global::WallSheet.Properties.Resources.Screenshot_2024_05_24_223448;
-            this.btnSend_click.Location = new System.Drawing.Point(322, 498);
-            this.btnSend_click.Name = "btnSend_click";
-            this.btnSend_click.Size = new System.Drawing.Size(65, 41);
-            this.btnSend_click.TabIndex = 0;
-            this.btnSend_click.Click += new System.EventHandler(this.btnSend_click_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(3, 498);
-            this.textBox1.MaxLength = 327678;
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(309, 41);
-            this.textBox1.TabIndex = 3;
-            // 
-            // listView1
-            // 
-            this.listView1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 9);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(387, 466);
-            this.listView1.TabIndex = 2;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // btnPVE_click
             // 
             this.btnPVE_click.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F);
-            this.btnPVE_click.Location = new System.Drawing.Point(410, 309);
+            this.btnPVE_click.Location = new System.Drawing.Point(18, 287);
             this.btnPVE_click.Name = "btnPVE_click";
             this.btnPVE_click.Size = new System.Drawing.Size(88, 41);
             this.btnPVE_click.TabIndex = 2;
@@ -215,12 +184,26 @@
             // btnPVP_Click
             // 
             this.btnPVP_Click.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F);
-            this.btnPVP_Click.Location = new System.Drawing.Point(410, 388);
+            this.btnPVP_Click.Location = new System.Drawing.Point(18, 366);
             this.btnPVP_Click.Name = "btnPVP_Click";
             this.btnPVP_Click.Size = new System.Drawing.Size(88, 37);
             this.btnPVP_Click.TabIndex = 3;
             this.btnPVP_Click.Text = "PVP";
             this.btnPVP_Click.UseVisualStyleBackColor = true;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.Controls.Add(this.btnPVP_Click);
+            this.panel4.Controls.Add(this.btnPVE_click);
+            this.panel4.Location = new System.Drawing.Point(359, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(943, 586);
+            this.panel4.TabIndex = 4;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // ProfileName
             // 
@@ -228,9 +211,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WallSheet.Properties.Resources.cach_choi_ma_soi_1;
             this.ClientSize = new System.Drawing.Size(1318, 593);
-            this.Controls.Add(this.btnPVP_Click);
-            this.Controls.Add(this.btnPVE_click);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Name = "ProfileName";
             this.Text = "Form2";
@@ -239,8 +220,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -253,11 +233,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnSend_click;
         private System.Windows.Forms.Button btnPVE_click;
         private System.Windows.Forms.Button btnPVP_Click;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Timer timer1;
     }
 }
