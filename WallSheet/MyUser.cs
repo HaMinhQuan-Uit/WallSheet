@@ -38,6 +38,11 @@ namespace Firebase_Project
                 error1 = "Tài khoản không tồn tại!";
                 return false;
             }
+            else if(user1.Email == user2.Email)
+            {
+                error1 = " Email này đã tồn tại!";
+                return false;
+            }
             
 
             else if (user1.Password != user2.Password)
