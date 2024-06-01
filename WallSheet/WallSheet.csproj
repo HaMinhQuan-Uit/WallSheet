@@ -81,6 +81,12 @@
     <Compile Include="ProfileName.Designer.cs">
       <DependentUpon>ProfileName.cs</DependentUpon>
     </Compile>
+    <Compile Include="PVE_random.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PVE_random.Designer.cs">
+      <DependentUpon>PVE_random.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="PVE_random.resx">
+      <DependentUpon>PVE_random.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
