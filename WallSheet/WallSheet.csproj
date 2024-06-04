@@ -76,6 +76,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormLose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLose.Designer.cs">
+      <DependentUpon>FormLose.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormWin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     <Compile Include="MyUser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormLose.resx">
+      <DependentUpon>FormLose.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormWin.resx">
       <DependentUpon>FormWin.cs</DependentUpon>
     </EmbeddedResource>

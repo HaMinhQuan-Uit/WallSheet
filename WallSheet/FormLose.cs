@@ -10,15 +10,16 @@ using System.Windows.Forms;
 
 namespace WallSheet
 {
-    public partial class FormWin : Form
+    public partial class FormLose : Form
     {
-        public FormWin()
+        public FormLose()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+
         }
     }
 }

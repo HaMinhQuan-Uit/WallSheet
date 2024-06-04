@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace WallSheet
 {
     public partial class PVE_random : Form
@@ -115,6 +116,23 @@ namespace WallSheet
         private void chart1_Click(object sender, EventArgs e)
         {
 
+        }
+        private void CheckWinLose(int budget, int turn)
+        {
+            int target = int.Parse(Target.Text);
+
+            if (budget >= target)
+            {
+                // Win condition
+                FormWin winForm = new FormWin();
+                winForm.Show();
+            }
+            else if (turn == 0)
+            {
+                // Lose condition
+                FormLose loseForm = new FormLose();
+                loseForm.Show();
+            }
         }
     }
 }
