@@ -81,6 +81,8 @@ namespace WallSheet
             Quantity.Text = y.ToString();
             Turn.Text = m.ToString();
             UpdateChart(z, m);
+            CheckWinLose(z, m);
+
 
         }
 
@@ -101,6 +103,8 @@ namespace WallSheet
             Quantity.Text = y.ToString();
             Turn.Text = m.ToString();
             UpdateChart(z, m);
+            CheckWinLose(z, m);
+
 
         }
         private void UpdateChart(int budget, int turn)
