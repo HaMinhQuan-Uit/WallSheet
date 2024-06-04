@@ -79,6 +79,8 @@ namespace WallSheet
             Budget.Text = z.ToString();
             Quantity.Text = y.ToString();
             Turn.Text = m.ToString();
+            UpdateChart(z, m);
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -97,7 +99,22 @@ namespace WallSheet
             Budget.Text = z.ToString();
             Quantity.Text = y.ToString();
             Turn.Text = m.ToString();
+            UpdateChart(z, m);
+
+        }
+        private void UpdateChart(int budget, int turn)
+        {
+            // Add a new point to the chart
+            chart1.Series["Budget"].Points.AddXY(turn, budget);
+
+            // Set the maximum value of the Y axis to the target value
+            int target = int.Parse(Target.Text);
+            chart1.ChartAreas[0].AxisY.Maximum = target;
         }
 
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
