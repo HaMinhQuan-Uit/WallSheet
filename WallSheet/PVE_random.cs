@@ -12,6 +12,7 @@ namespace WallSheet
 {
     public partial class PVE_random : Form
     {
+        private Random random = new Random();
         public PVE_random()
         {
             InitializeComponent();
@@ -24,9 +25,6 @@ namespace WallSheet
 
         private void PVE_random_Load(object sender, EventArgs e)
         {
-
-            
-                Random random = new Random();
 
                 // Generate random values
                 int turn = random.Next(10, 31);
@@ -67,7 +65,39 @@ namespace WallSheet
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int a = int.Parse(textBox5.Text);
+            int x = random.Next();
+            int z = int.Parse(Budget.Text);
+            int y = int.Parse(Quantity.Text);
+            int m = int.Parse(Turn.Text);
 
+            z = z + a * x;
+            y = y - a;
+            m--;
+
+            Price.Text = x.ToString();
+            Budget.Text = z.ToString();
+            Quantity.Text = y.ToString();
+            Turn.Text = m.ToString();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int a = int.Parse(textBox5.Text);
+            int x = random.Next();
+            int z = int.Parse(Budget.Text);
+            int y = int.Parse(Quantity.Text);
+            int m = int.Parse(Turn.Text);
+
+            z = z - a * x;
+            y = y + a;
+            m--;
+
+            Price.Text = x.ToString();
+            Budget.Text = z.ToString();
+            Quantity.Text = y.ToString();
+            Turn.Text = m.ToString();
+        }
+
     }
 }
