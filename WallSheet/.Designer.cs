@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,6 +39,9 @@
             this.btnReg = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.txbPhoneNumber = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -143,6 +147,31 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Wall Sheet";
             // 
+            // txbPhoneNumber
+            // 
+            this.txbPhoneNumber.Location = new System.Drawing.Point(26, 406);
+            this.txbPhoneNumber.Name = "txbPhoneNumber";
+            this.txbPhoneNumber.Size = new System.Drawing.Size(240, 22);
+            this.txbPhoneNumber.TabIndex = 12;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(28, 385);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(125, 18);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Phone Number:";
+            // 
             // formRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -150,6 +179,8 @@
             this.BackgroundImage = global::WallSheet.Properties.Resources.cach_choi_ma_soi_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txbPhoneNumber);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnReg);
@@ -181,5 +212,8 @@
         private System.Windows.Forms.Button btnReg;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txbPhoneNumber;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -77,6 +77,7 @@ namespace WallSheet
 
         private void btnResgiter_click_Click(object sender, EventArgs e)
         {
+            this.Hide();
              formRegistration  reg = new formRegistration();
             reg.Hide();
             reg.Show();

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,10 +15,11 @@ namespace Firebase_Project
         public string Password { get; set; }
         public string ComfirnPassWord { get; set; }
         public string Email { get; set; }
+        public string Phonenumber { get; set; }
 
         private static string error1 = "Tài khoản không tồn tại!";
         private static string error2 = "Cảnh báo";
-
+        private static string error3 = "Số điện thoại đã tồn tại";
         public static void ShowError()
         {
 
@@ -27,6 +29,12 @@ namespace Firebase_Project
         public static void ShowError_2()
         {
             System.Windows.Forms.MessageBox.Show("Tài khoản đã tồn tại!", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+        }
+        public static void ShowError3()
+        {
+            System.Windows.Forms.MessageBox.Show("Số điện thoại đã tồn tại, Vui lòng nhập số điện thoại khác !", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
         }
 
         public static bool IsEqual(MyUser user1, MyUser user2)
@@ -38,12 +46,6 @@ namespace Firebase_Project
                 error1 = "Tài khoản không tồn tại!";
                 return false;
             }
-            else if(user1.Email == user2.Email)
-            {
-                error1 = " Email này đã tồn tại!";
-                return false;
-            }
-            
 
             else if (user1.Password != user2.Password)
             {
@@ -52,12 +54,9 @@ namespace Firebase_Project
             }
             else if (user1.Password != user1.ComfirnPassWord)
             {
-                error1 = "Mật Khẩu Không Khớp!";
-
+                error1 = "Mật khẩu không khớp!";
+                return false;
             }
-
-
-
 
             return true;
         }
@@ -70,9 +69,17 @@ namespace Firebase_Project
             {
                 System.Windows.Forms.MessageBox.Show("Tài khoản không tồn tại!", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
+             
             }
+          
+            
+
 
             return true;
         }
+        
+      
+    
+        
     }
 }
