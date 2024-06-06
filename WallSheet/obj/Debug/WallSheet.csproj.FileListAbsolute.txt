@@ -28,3 +28,6 @@ E:\Học Tập\lập_trình_mạng\Đồ Án 2\WallSheet\obj\Debug\WallSheet.csp
 E:\Học Tập\lập_trình_mạng\Đồ Án 2\WallSheet\obj\Debug\WallSheet.exe
 E:\Học Tập\lập_trình_mạng\Đồ Án 2\WallSheet\obj\Debug\WallSheet.pdb
 E:\Học Tập\lập_trình_mạng\Đồ Án 2\WallSheet\obj\Debug\WallSheet.ProfileName.resources
+E:\Học Tập\lập_trình_mạng\Đồ Án 2\WallSheet\obj\Debug\WallSheet.FormLose.resources
+E:\Học Tập\lập_trình_mạng\Đồ Án 2\WallSheet\obj\Debug\WallSheet.FormWin.resources
+E:\Học Tập\lập_trình_mạng\Đồ Án 2\WallSheet\obj\Debug\WallSheet.PVE_random.resources

@@ -42,6 +42,8 @@
             this.txbPhoneNumber = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label6 = new System.Windows.Forms.Label();
+            this.LabelPhone = new System.Windows.Forms.Label();
+            this.txbPhone = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -49,10 +51,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 68);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(21, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 55);
+            this.label1.Size = new System.Drawing.Size(248, 69);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sign Up";
             // 
@@ -62,10 +63,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.label2.Location = new System.Drawing.Point(21, 137);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(28, 169);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 15);
+            this.label2.Size = new System.Drawing.Size(93, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "UserName:";
             // 
@@ -75,10 +75,9 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(21, 202);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(28, 249);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 15);
+            this.label3.Size = new System.Drawing.Size(88, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "Password:";
             // 
@@ -88,45 +87,44 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(20, 263);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(27, 324);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 15);
+            this.label5.Size = new System.Drawing.Size(55, 18);
             this.label5.TabIndex = 4;
             this.label5.Text = "Email:";
             // 
             // txbUserrName
             // 
             this.txbUserrName.CausesValidation = false;
-            this.txbUserrName.Location = new System.Drawing.Point(20, 165);
-            this.txbUserrName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbUserrName.Location = new System.Drawing.Point(27, 203);
+            this.txbUserrName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbUserrName.Name = "txbUserrName";
-            this.txbUserrName.Size = new System.Drawing.Size(214, 20);
+            this.txbUserrName.Size = new System.Drawing.Size(284, 22);
             this.txbUserrName.TabIndex = 5;
             // 
             // txbPassword
             // 
-            this.txbPassword.Location = new System.Drawing.Point(22, 228);
-            this.txbPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbPassword.Location = new System.Drawing.Point(29, 281);
+            this.txbPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbPassword.Name = "txbPassword";
-            this.txbPassword.Size = new System.Drawing.Size(212, 20);
+            this.txbPassword.Size = new System.Drawing.Size(281, 22);
             this.txbPassword.TabIndex = 6;
             // 
             // txbEmail
             // 
-            this.txbEmail.Location = new System.Drawing.Point(22, 280);
-            this.txbEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbEmail.Location = new System.Drawing.Point(29, 345);
+            this.txbEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbEmail.Name = "txbEmail";
-            this.txbEmail.Size = new System.Drawing.Size(212, 20);
+            this.txbEmail.Size = new System.Drawing.Size(281, 22);
             this.txbEmail.TabIndex = 8;
             // 
             // btnReg
             // 
             this.btnReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReg.Location = new System.Drawing.Point(20, 304);
-            this.btnReg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReg.Location = new System.Drawing.Point(362, 374);
+            this.btnReg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReg.Name = "btnReg";
-            this.btnReg.Size = new System.Drawing.Size(105, 32);
+            this.btnReg.Size = new System.Drawing.Size(140, 39);
             this.btnReg.TabIndex = 9;
             this.btnReg.Text = "Register";
             this.btnReg.UseVisualStyleBackColor = true;
@@ -135,10 +133,10 @@
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(129, 304);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Location = new System.Drawing.Point(521, 374);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(105, 32);
+            this.btnBack.Size = new System.Drawing.Size(140, 39);
             this.btnBack.TabIndex = 10;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -150,18 +148,18 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Impact", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.IndianRed;
-            this.label4.Location = new System.Drawing.Point(207, 7);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(276, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(246, 60);
+            this.label4.Size = new System.Drawing.Size(305, 75);
             this.label4.TabIndex = 11;
             this.label4.Text = "Wall Sheet";
             // 
             // txbPhoneNumber
             // 
-            this.txbPhoneNumber.Location = new System.Drawing.Point(26, 406);
+            this.txbPhoneNumber.Location = new System.Drawing.Point(35, 500);
+            this.txbPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txbPhoneNumber.Name = "txbPhoneNumber";
-            this.txbPhoneNumber.Size = new System.Drawing.Size(240, 22);
+            this.txbPhoneNumber.Size = new System.Drawing.Size(319, 22);
             this.txbPhoneNumber.TabIndex = 12;
             // 
             // contextMenuStrip1
@@ -176,25 +174,44 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(28, 385);
+            this.label6.Location = new System.Drawing.Point(37, 474);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(125, 18);
             this.label6.TabIndex = 14;
             this.label6.Text = "Phone Number:";
             // 
+            // LabelPhone
+            // 
+            this.LabelPhone.AutoSize = true;
+            this.LabelPhone.BackColor = System.Drawing.Color.Transparent;
+            this.LabelPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelPhone.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.LabelPhone.Location = new System.Drawing.Point(28, 383);
+            this.LabelPhone.Name = "LabelPhone";
+            this.LabelPhone.Size = new System.Drawing.Size(120, 18);
+            this.LabelPhone.TabIndex = 15;
+            this.LabelPhone.Text = "PhoneNumber:";
+            // 
+            // txbPhone
+            // 
+            this.txbPhone.Location = new System.Drawing.Point(27, 403);
+            this.txbPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txbPhone.Name = "txbPhone";
+            this.txbPhone.Size = new System.Drawing.Size(281, 22);
+            this.txbPhone.TabIndex = 16;
+            // 
             // formRegistration
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WallSheet.Properties.Resources.cach_choi_ma_soi_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txbPhone);
+            this.Controls.Add(this.LabelPhone);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txbPhoneNumber);
-=======
-            this.ClientSize = new System.Drawing.Size(600, 366);
->>>>>>> 2098d6b6efae5c57a925db501a9a0e3fc9c0334c
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnReg);
@@ -206,7 +223,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "formRegistration";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.formRegistration_Load);
@@ -230,5 +247,7 @@
         private System.Windows.Forms.TextBox txbPhoneNumber;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label LabelPhone;
+        private System.Windows.Forms.TextBox txbPhone;
     }
 }

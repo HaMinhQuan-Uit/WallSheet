@@ -31,11 +31,7 @@ namespace Firebase_Project
             System.Windows.Forms.MessageBox.Show("Tài khoản đã tồn tại!", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
         }
-        public static void ShowError3()
-        {
-            System.Windows.Forms.MessageBox.Show("Số điện thoại đã tồn tại, Vui lòng nhập số điện thoại khác !", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-        }
+       
 
         public static bool IsEqual(MyUser user1, MyUser user2)
         {
@@ -52,7 +48,7 @@ namespace Firebase_Project
                 error1 = "Sai tài khoản hoặc mật khẩu!";
                 return false;
             }
-            else if (user1.Password != user1.ComfirnPassWord)
+            else if (user1.Password != user1.Password)
             {
                 error1 = "Mật khẩu không khớp!";
                 return false;
@@ -71,10 +67,7 @@ namespace Firebase_Project
                 return false;
              
             }
-          
-            
-
-
+         
             return true;
         }
         

@@ -49,7 +49,7 @@ namespace WallSheet
             if (string.IsNullOrWhiteSpace(txbUserrName.Text) ||
                 string.IsNullOrWhiteSpace(txbPassword.Text) ||
                 string.IsNullOrWhiteSpace(txbEmail.Text) ||
-                string.IsNullOrWhiteSpace(txbPhoneNumber.Text))
+                string.IsNullOrWhiteSpace(txbPhone.Text))
                 
             {
 
@@ -70,11 +70,6 @@ namespace WallSheet
                 return;
             }
 
-            MyUser Phone = new MyUser()
-            {
-                Phonenumber = txbPhoneNumber.Text,
-            };
-
             MyUser user = new MyUser()
             {
                 Username = txbUserrName.Text,
@@ -83,14 +78,11 @@ namespace WallSheet
                 Phonenumber = txbPhoneNumber.Text
             };
 
-            FirebaseResponse phoneres = client.Get(@"Users/" + txbPhoneNumber.Text);
-            MyUser ExitingUser = phoneres.ResultAs<MyUser>();
-           
             SetResponse set = client.Set(@"Users/" + txbUserrName.Text, user);
             if (set.StatusCode == System.Net.HttpStatusCode.OK)
 
             { 
-                    MessageBox.Show($"Đăng ký thành công tài khoản {txbUserrName.Text}!", "Chúc mừng!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+              MessageBox.Show($"Đăng ký thành công tài khoản {txbUserrName.Text}!", "Chúc mừng!", MessageBoxButtons.OK, MessageBoxIcon.Information);
               
             }
 
