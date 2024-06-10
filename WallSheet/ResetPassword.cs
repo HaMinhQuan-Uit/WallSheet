@@ -1,14 +1,16 @@
-﻿using FireSharp.Config;
+﻿// ResetPassword.cs
+using FireSharp.Config;
 using FireSharp.Interfaces;
 using FireSharp.Response;
 using System;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WallSheet
 {
     public partial class ResetPassword : Form
     {
+        private string phoneNumber;
+
         IFirebaseConfig ifc = new FirebaseConfig()
         {
             AuthSecret = "UYaSCRpXgQFANuKeFHlhq5l6DZLMcmtNXkZjL1nJ",
@@ -16,9 +18,10 @@ namespace WallSheet
         };
         IFirebaseClient client;
 
-        public ResetPassword()
+        public ResetPassword(string phoneNumber)
         {
             InitializeComponent();
+            this.phoneNumber = phoneNumber;
             InitializeFirebase();
         }
 
@@ -27,36 +30,47 @@ namespace WallSheet
             try
             {
                 client = new FireSharp.FirebaseClient(ifc);
+                if (client == null)
+                {
+                    throw new Exception("Client is null, failed to create FireSharp client.");
+                }
+                MessageBox.Show("Firebase connection established successfully");
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Kiểm tra lại mạng", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"Failed to initialize Firebase client: {ex.Message}", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-        private async void button1_Click(object sender, EventArgs e)
+        private async void buttonUpdatePassword_Click(object sender, EventArgs e)
         {
-            string email = SendCode.to;
-            string newPassword = textBox1.Text;
+            string newPassword = textBoxNewPassword.Text;
 
-            // Update mật khẩu mới vào Firebase
-            var update = new { password = newPassword };
-            FirebaseResponse response = await Task.Run(() => client.Update($"users/{email}/password", update));
-
-            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            if (!string.IsNullOrEmpty(newPassword))
             {
-                MessageBox.Show("Password reset successful.");
-                this.Close();
+                try
+                {
+                    var data = new { password = newPassword };
+                    FirebaseResponse response = await client.UpdateAsync($"users/{phoneNumber}/password", data);
+                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                    {
+                        MessageBox.Show("Password updated successfully");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to update password");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error updating password: {ex.Message}");
+                }
             }
             else
             {
-                MessageBox.Show("Error resetting password.");
+                MessageBox.Show("Please enter a new password");
             }
-        }
-
-        private void ResetPassword_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
