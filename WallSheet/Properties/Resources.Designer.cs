@@ -63,6 +63,16 @@ namespace WallSheet.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _ea1eb2bf_e5fc_4daa_90d8_de1ef1c0b4c2 {
+            get {
+                object obj = ResourceManager.GetObject("_ea1eb2bf-e5fc-4daa-90d8-de1ef1c0b4c2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cach_choi_ma_soi_1 {
             get {
                 object obj = ResourceManager.GetObject("cach-choi-ma-soi-1", resourceCulture);
@@ -166,6 +176,26 @@ namespace WallSheet.Properties {
         internal static System.Drawing.Bitmap Screenshot_2024_05_26_131401 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2024-05-26 131401", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap send {
+            get {
+                object obj = ResourceManager.GetObject("send", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap send1 {
+            get {
+                object obj = ResourceManager.GetObject("send1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

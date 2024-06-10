@@ -191,11 +191,17 @@
     <Compile Include="SendCode.Designer.cs">
       <DependentUpon>SendCode.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Client.resx">
+      <DependentUpon>Client.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLose.resx">
       <DependentUpon>FormLose.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormWin.resx">
       <DependentUpon>FormWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Host.resx">
+      <DependentUpon>Host.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -265,6 +271,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\nomoney.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_ea1eb2bf-e5fc-4daa-90d8-de1ef1c0b4c2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
