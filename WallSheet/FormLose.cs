@@ -19,7 +19,9 @@ namespace WallSheet
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            ProfileName profileName = new ProfileName();
+            this.Hide();
+            profileName.ShowDialog();
         }
     }
 }

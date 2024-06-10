@@ -98,7 +98,10 @@ namespace WallSheet
 
         private void btnPVE_click_Click(object sender, EventArgs e)
         {
-           
+            //func to connect tho PVE_random
+            PVE_random pve = new PVE_random();
+            pve.Show();
+            this.Hide();
         }
     }
 }

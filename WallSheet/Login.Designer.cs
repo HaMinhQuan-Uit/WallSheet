@@ -80,9 +80,9 @@
             // btnLogin_click
             // 
             this.btnLogin_click.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin_click.Location = new System.Drawing.Point(129, 268);
+            this.btnLogin_click.Location = new System.Drawing.Point(26, 268);
             this.btnLogin_click.Name = "btnLogin_click";
-            this.btnLogin_click.Size = new System.Drawing.Size(99, 43);
+            this.btnLogin_click.Size = new System.Drawing.Size(156, 43);
             this.btnLogin_click.TabIndex = 3;
             this.btnLogin_click.Text = "Login";
             this.btnLogin_click.UseVisualStyleBackColor = true;
@@ -91,9 +91,9 @@
             // btnResgiter_click
             // 
             this.btnResgiter_click.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResgiter_click.Location = new System.Drawing.Point(255, 268);
+            this.btnResgiter_click.Location = new System.Drawing.Point(198, 268);
             this.btnResgiter_click.Name = "btnResgiter_click";
-            this.btnResgiter_click.Size = new System.Drawing.Size(99, 43);
+            this.btnResgiter_click.Size = new System.Drawing.Size(156, 43);
             this.btnResgiter_click.TabIndex = 4;
             this.btnResgiter_click.Text = "Register";
             this.btnResgiter_click.UseVisualStyleBackColor = true;
