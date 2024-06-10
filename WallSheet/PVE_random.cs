@@ -29,10 +29,10 @@ namespace WallSheet
             double price = (double)(random.NextDouble() * (99.99 - 0.09) + 0.09);
             double budget = (double)(random.NextDouble() * (1000000 - 0.1) + 0.1);
 
-            // Generate a target value that is up to 5 times bigger than the budget
-            double target = budget * (random.NextDouble() * 4 + 1); // This will give a value between 1 and 5 times the budget
+            // Generate a target value that is up to 3 times more than the budget
+            double target = budget * (random.NextDouble() * 2 + 1); // This will give a value between 1 and 3 times the budget
 
-            int quantity = random.Next(0, 10001); // Set the lowest value to 0
+            int quantity = 0; // Set the starting value to 0
 
             // Set the values to the textboxes
             Turn.Text = turn.ToString();
@@ -64,38 +64,10 @@ namespace WallSheet
             double z = double.Parse(Budget.Text);
             int y = int.Parse(Quantity.Text);
             int m = int.Parse(Turn.Text);
-
-            z = z + a * x;
-            y = y - a;
-            m--;
-
-            Price.Text = x.ToString();
-            Budget.Text = z.ToString();
-            Quantity.Text = y.ToString();
-            Turn.Text = m.ToString();
-            dataPoints.Add(new KeyValuePair<int, double>(turn, z));
-            UpdateChart(dataPoints);
-            turn++;
-            CheckWinLose(z, m);
-
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            int a = int.Parse(textBox5.Text);
-            Random random = new Random();
-            double x = random.NextDouble() * (200 - 1) + 1; //give a value between 1% and 200%
-
-            double z = double.Parse(Budget.Text);
-            int y = int.Parse(Quantity.Text);
-            int m = int.Parse(Turn.Text);
-
-            // Check if quantity minus the amount to be sold is greater than or equal to 0 before selling
             if (y - a >= 0)
             {
-                z = z - a * x;
-                y = y + a;
+                z = z + a * x;
+                y = y - a;
                 m--;
 
                 Price.Text = x.ToString();
@@ -111,6 +83,33 @@ namespace WallSheet
             {
                 MessageBox.Show("Cannot sell more than the current quantity.");
             }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int a = int.Parse(textBox5.Text);
+            Random random = new Random();
+            double x = random.NextDouble() * (200 - 1) + 1; //give a value between 1% and 200%
+
+            double z = double.Parse(Budget.Text);
+            int y = int.Parse(Quantity.Text);
+            int m = int.Parse(Turn.Text);
+
+                z = z - a * x;
+                y = y + a;
+                m--;
+
+                Price.Text = x.ToString();
+                Budget.Text = z.ToString();
+                Quantity.Text = y.ToString();
+                Turn.Text = m.ToString();
+                dataPoints.Add(new KeyValuePair<int, double>(turn, z));
+                UpdateChart(dataPoints);
+                turn++;
+                CheckWinLose(z, m);
+            
+            
         }
         private void UpdateChart(List<KeyValuePair<int, double>> dataPoints)
         {
@@ -168,6 +167,38 @@ namespace WallSheet
                 loseForm.Show();
                 this.Close();
             }
+        }
+        private void SkipTurn()
+        {
+            // Increment the turn counter
+            turn++;
+            int m = int.Parse(Turn.Text);
+            m--;
+            // Add a new data point with the current budget
+            double z = double.Parse(Budget.Text);
+            dataPoints.Add(new KeyValuePair<int, double>(turn, z));
+
+            // Update the chart with the full list of data points
+            UpdateChart(dataPoints);
+
+            // Update the turn text box
+            Turn.Text = m.ToString();
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SkipTurn();
+            int m = int.Parse(Turn.Text);
+            double z = double.Parse(Budget.Text);
+            Budget.Text = z.ToString();
+            CheckWinLose(z, m);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // func to show lose form
+            FormLose loseForm = new FormLose();
+            loseForm.Show();
+            this.Close();
         }
     }
 }
