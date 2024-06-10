@@ -127,6 +127,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client.Designer.cs">
+      <DependentUpon>Client.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLose.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,12 @@
     </Compile>
     <Compile Include="FormWin.Designer.cs">
       <DependentUpon>FormWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Host.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Host.Designer.cs">
+      <DependentUpon>Host.cs</DependentUpon>
     </Compile>
     <Compile Include="ProfileName.cs">
       <SubType>Form</SubType>

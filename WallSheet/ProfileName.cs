@@ -103,6 +103,11 @@ namespace WallSheet
             pve.Show();
             this.Hide();
         }
+
+        private void btnPVP_Click_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

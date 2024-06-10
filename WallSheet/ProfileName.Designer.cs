@@ -200,6 +200,7 @@
             this.btnPVP_Click.TabIndex = 3;
             this.btnPVP_Click.Text = "PVP";
             this.btnPVP_Click.UseVisualStyleBackColor = true;
+            this.btnPVP_Click.Click += new System.EventHandler(this.btnPVP_Click_Click);
             // 
             // panel4
             // 
