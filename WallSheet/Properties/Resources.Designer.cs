@@ -73,6 +73,26 @@ namespace WallSheet.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap nhieutien {
+            get {
+                object obj = ResourceManager.GetObject("nhieutien", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nomoney {
+            get {
+                object obj = ResourceManager.GetObject("nomoney", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Screenshot_2024_05_23_211456 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2024-05-23 211456", resourceCulture);

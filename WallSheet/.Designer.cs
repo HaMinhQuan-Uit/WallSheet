@@ -107,8 +107,10 @@
             this.txbPassword.Location = new System.Drawing.Point(29, 281);
             this.txbPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbPassword.Name = "txbPassword";
+            this.txbPassword.PasswordChar = '*';
             this.txbPassword.Size = new System.Drawing.Size(281, 22);
             this.txbPassword.TabIndex = 6;
+            this.txbPassword.UseSystemPasswordChar = true;
             // 
             // txbEmail
             // 
