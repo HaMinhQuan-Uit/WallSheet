@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
@@ -17,13 +18,15 @@ namespace WallSheet
         private TcpClient client;
         private NetworkStream stream;
         private Random random = new Random();
-        private List<KeyValuePair<int, double>> dataPoints = new List<KeyValuePair<int, double>>(); // Add this line
-        private int turn = 1; // Add this line
+        private List<KeyValuePair<int, double>> dataPoints = new List<KeyValuePair<int, double>>();
+        private int turn = 1;
+        private Thread receiveThread;
 
         public Client()
         {
             InitializeComponent();
         }
+
         private void ConnectToServer()
         {
             try
@@ -31,31 +34,48 @@ namespace WallSheet
                 client = new TcpClient("127.0.0.1", 8888);
                 stream = client.GetStream();
                 AppendToChatLog("Connected to server.");
+
+                receiveThread = new Thread(ReceiveMessages);
+                receiveThread.Start();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void ReceiveMessages()
+        {
+            try
+            {
+                byte[] buffer = new byte[1024];
+                int bytesRead;
+                while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) > 0)
+                {
+                    string message = Encoding.ASCII.GetString(buffer, 0, bytesRead);
+                    AppendToChatLog($"Server: {message}");
+                }
+            }
+            catch (Exception ex)
+            {
+                AppendToChatLog($"Error receiving data: {ex.Message}");
+            }
+        }
+
         private void Client_Load(object sender, EventArgs e)
         {
             ConnectToServer();
-            // Generate random values
-            int turn = random.Next(10, 31);
-            double price = (double)(random.NextDouble() * (99.99 - 0.09) + 0.09);
-            double budget = (double)(random.NextDouble() * (1000000 - 0.1) + 0.1);
+            turn = random.Next(10, 31);
+            double price = random.NextDouble() * (99.99 - 0.09) + 0.09;
+            double budget = random.NextDouble() * (1000000 - 0.1) + 0.1;
+            double target = budget * (random.NextDouble() * 2 + 1);
+            int quantity = 0;
 
-            // Generate a target value that is up to 3 times more than the budget
-            double target = budget * (random.NextDouble() * 2 + 1); // This will give a value between 1 and 3 times the budget
-
-            int quantity = 0; // Set the starting value to 0
-
-            // Set the values to the textboxes
             Turn.Text = turn.ToString();
-            Price.Text = price.ToString("F2"); // F2 for 2 decimal places
-            Budget.Text = budget.ToString("F2"); // F2 for 2 decimal places
-            Target.Text = target.ToString("F2"); // F2 for 2 decimal places
-            Quantity.Text = quantity.ToString(); // Set Quantity
+            Price.Text = price.ToString("F2");
+            Budget.Text = budget.ToString("F2");
+            Target.Text = target.ToString("F2");
+            Quantity.Text = quantity.ToString();
         }
 
         private void btnSend_Click(object sender, EventArgs e)
@@ -69,6 +89,7 @@ namespace WallSheet
                 txtMessage.Clear();
             }
         }
+
         private void AppendToChatLog(string message)
         {
             if (InvokeRequired)
@@ -79,44 +100,49 @@ namespace WallSheet
 
             txtChatLog.AppendText(message + Environment.NewLine);
         }
-        private void ClientForm_FormClosing(object sender, FormClosingEventArgs e)
+
+        private void Client_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (client != null)
             {
                 client.Close();
             }
+
+            if (receiveThread != null && receiveThread.IsAlive)
+            {
+                receiveThread.Abort();
+            }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+        private void label1_Click(object sender, EventArgs e) { }
 
-        }
-
-        private void Price_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        private void Price_TextChanged(object sender, EventArgs e) { }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            HandleSell();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            HandleBuy();
+        }
+
+        private void HandleSell()
+        {
             int a = int.Parse(textBox5.Text);
-            Random random = new Random();
-            double x = Host.Instance.textBox3; // Get the x value from the Host form
+            double x = Host.Instance.textBox3;
             double z = double.Parse(Budget.Text);
             int y = int.Parse(Quantity.Text);
             int m = int.Parse(Turn.Text);
+
             if (y - a >= 0)
             {
                 z = z + a * x;
                 y = y - a;
                 m--;
 
-                Price.Text = x.ToString();
-                Budget.Text = z.ToString();
-                Quantity.Text = y.ToString();
-                Turn.Text = m.ToString();
-                dataPoints.Add(new KeyValuePair<int, double>(turn, z));
-                UpdateChart(dataPoints);
+                UpdateUI(x, z, y, m);
                 turn++;
                 CheckWinLose(z, m);
             }
@@ -126,12 +152,10 @@ namespace WallSheet
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void HandleBuy()
         {
             int a = int.Parse(textBox5.Text);
-            Random random = new Random();
-            double x = Host.Instance.textBox3; // Get the x value from the Host form
-
+            double x = Host.Instance.textBox3;
             double z = double.Parse(Budget.Text);
             int y = int.Parse(Quantity.Text);
             int m = int.Parse(Turn.Text);
@@ -140,18 +164,24 @@ namespace WallSheet
             y = y + a;
             m--;
 
-            Price.Text = x.ToString();
-            Budget.Text = z.ToString();
-            Quantity.Text = y.ToString();
-            Turn.Text = m.ToString();
-            dataPoints.Add(new KeyValuePair<int, double>(turn, z));
-            UpdateChart(dataPoints);
+            UpdateUI(x, z, y, m);
             turn++;
             CheckWinLose(z, m);
         }
+
+        private void UpdateUI(double price, double budget, int quantity, int turn)
+        {
+            Price.Text = price.ToString();
+            Budget.Text = budget.ToString();
+            Quantity.Text = quantity.ToString();
+            Turn.Text = turn.ToString();
+
+            dataPoints.Add(new KeyValuePair<int, double>(this.turn, budget));
+            UpdateChart(dataPoints);
+        }
+
         private void UpdateChart(List<KeyValuePair<int, double>> dataPoints)
         {
-            // Create a new series.
             var series = new Series("Budget")
             {
                 ChartType = SeriesChartType.Line,
@@ -159,69 +189,56 @@ namespace WallSheet
                 BorderWidth = 2
             };
 
-            // Add each data point to the series.
             foreach (var dataPoint in dataPoints)
             {
                 series.Points.AddXY(dataPoint.Key, dataPoint.Value);
             }
 
-            // Clear any existing series.
             chart1.Series.Clear();
-
-            // Add the new series.
             chart1.Series.Add(series);
 
-            // Set the chart area's X and Y axis titles.
             chart1.ChartAreas[0].AxisX.Title = "Turn";
             chart1.ChartAreas[0].AxisY.Title = "Budget";
-
-            // Set the maximum value of the Y axis to the target value.
             double target = double.Parse(Target.Text);
             chart1.ChartAreas[0].AxisY.Maximum = target;
-
-            // Force the chart to redraw.
             chart1.Invalidate();
         }
+
         private void CheckWinLose(double budget, int turn)
         {
             double target = double.Parse(Target.Text);
 
             if (budget >= target)
             {
-                // Win condition
                 FormWin winForm = new FormWin();
                 winForm.Show();
+                SendMessageToServer("WIN");
                 this.Close();
             }
             else if (turn == 0)
             {
-                // Lose condition
                 FormLose loseForm = new FormLose();
                 loseForm.Show();
+                SendMessageToServer("LOSE");
                 this.Close();
             }
         }
+
         private void SkipTurn()
         {
-            // Increment the turn counter
             turn++;
             int m = int.Parse(Turn.Text);
             m--;
-            // Add a new data point with the current budget
             double z = double.Parse(Budget.Text);
             dataPoints.Add(new KeyValuePair<int, double>(turn, z));
-
-            // Update the chart with the full list of data points
             UpdateChart(dataPoints);
-
-            // Update the turn text box
             Turn.Text = m.ToString();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             SkipTurn();
-            double x = Host.Instance.textBox3; // Get the x value from the Host form
+            double x = Host.Instance.textBox3;
             Price.Text = x.ToString();
             int m = int.Parse(Turn.Text);
             double z = double.Parse(Budget.Text);
@@ -231,15 +248,23 @@ namespace WallSheet
 
         private void button4_Click(object sender, EventArgs e)
         {
-            // func to show lose form
             FormLose loseForm = new FormLose();
             loseForm.Show();
             this.Close();
         }
 
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
+        private void textBox5_TextChanged(object sender, EventArgs e) { }
 
+        private void SendMessageToServer(string message)
+        {
+            if (!string.IsNullOrEmpty(message))
+            {
+                byte[] buffer = Encoding.ASCII.GetBytes(message);
+                stream.Write(buffer, 0, buffer.Length);
+            }
         }
     }
 }
+
+
+

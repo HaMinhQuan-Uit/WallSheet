@@ -18,11 +18,13 @@ namespace WallSheet
         private TcpListener listener;
         private Thread listenThread;
         private string serverId;
+        private List<TcpClient> clients; // Danh sách các kết nối client
 
         public Host()
         {
             InitializeComponent();
             Instance = this;
+            clients = new List<TcpClient>(); // Khởi tạo danh sách các kết nối client
         }
 
         public static Host Instance { get; private set; }
@@ -33,12 +35,13 @@ namespace WallSheet
             {
                 listener = new TcpListener(IPAddress.Any, 8888);
                 listener.Start();
-                serverId = Guid.NewGuid().ToString(); // Generate a unique ID for the server
+                serverId = Guid.NewGuid().ToString();
                 AppendToChatLog($"Server started with ID: {serverId}. Waiting for connections...");
 
                 while (true)
                 {
                     TcpClient client = listener.AcceptTcpClient();
+                    clients.Add(client); // Thêm client vào danh sách
                     Thread clientThread = new Thread(new ParameterizedThreadStart(HandleClient));
                     clientThread.Start(client);
                 }
@@ -54,56 +57,60 @@ namespace WallSheet
             TcpClient client = (TcpClient)obj;
             NetworkStream stream = client.GetStream();
 
-            byte[] buffer = new byte[1024];
-            int bytesRead;
-            while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) > 0)
+            try
             {
-                string message = Encoding.ASCII.GetString(buffer, 0, bytesRead);
-                AppendToChatLog($"Client: {message}");
+                byte[] buffer = new byte[1024];
+                int bytesRead;
+                while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) > 0)
+                {
+                    string message = Encoding.ASCII.GetString(buffer, 0, bytesRead);
+                    AppendToChatLog($"Client: {message}");
 
-                if (message == "WIN")
-                {
-                    // Client won
-                    if (textBox4.Text == "Good Stock Broker")
+                    if (message == "WIN")
                     {
-                        // Host is Good, so host wins
-                        ShowWinForm();
+                        if (textBox4.Text == "Good Stock Broker")
+                        {
+                            ShowWinForm();
+                        }
+                        else
+                        {
+                            ShowLoseForm();
+                        }
                     }
-                    else
+                    else if (message == "LOSE")
                     {
-                        // Host is Bad, so host loses
-                        ShowLoseForm();
-                    }
-                }
-                else if (message == "LOSE")
-                {
-                    // Client lost
-                    if (textBox4.Text == "Good Stock Broker")
-                    {
-                        // Host is Good, so host loses
-                        ShowLoseForm();
-                    }
-                    else
-                    {
-                        // Host is Bad, so host wins
-                        ShowWinForm();
+                        if (textBox4.Text == "Good Stock Broker")
+                        {
+                            ShowLoseForm();
+                        }
+                        else
+                        {
+                            ShowWinForm();
+                        }
                     }
                 }
             }
-
-            client.Close();
+            catch (Exception ex)
+            {
+                AppendToChatLog($"Error handling client: {ex.Message}");
+            }
+            finally
+            {
+                clients.Remove(client); // Loại bỏ client khỏi danh sách khi ngắt kết nối
+                client.Close();
+            }
         }
 
         private void ShowWinForm()
         {
-            // Show the win form
+            // Hiển thị form chiến thắng
             FormWin winForm = new FormWin();
             winForm.Show();
         }
 
         private void ShowLoseForm()
         {
-            // Show the lose form
+            // Hiển thị form thất bại
             FormLose loseForm = new FormLose();
             loseForm.Show();
         }
@@ -132,22 +139,49 @@ namespace WallSheet
             {
                 listener.Stop();
             }
+
+            if (listenThread != null && listenThread.IsAlive)
+            {
+                listenThread.Abort();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Xử lý sự kiện khi button1 được nhấn để gửi tin nhắn
+            string message = textBox2.Text.Trim(); // Lấy tin nhắn từ textBox2
+            if (!string.IsNullOrEmpty(message))
+            {
+                byte[] buffer = Encoding.ASCII.GetBytes(message);
+                List<TcpClient> disconnectedClients = new List<TcpClient>();
 
-        }
+                foreach (var client in clients)
+                {
+                    try
+                    {
+                        NetworkStream stream = client.GetStream();
+                        stream.Write(buffer, 0, buffer.Length);
+                    }
+                    catch (Exception)
+                    {
+                        disconnectedClients.Add(client);
+                    }
+                }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+                foreach (var client in disconnectedClients)
+                {
+                    clients.Remove(client);
+                }
 
+                AppendToChatLog($"Server: {message}");
+                textBox2.Clear(); // Xóa textBox sau khi gửi tin nhắn
+            }
         }
 
         private void RandomizeHostJob()
         {
             Random random = new Random();
-            int randomNumber = random.Next(0, 2); // Generates 0 or 1
+            int randomNumber = random.Next(0, 2); // Tạo số ngẫu nhiên từ 0 đến 1
 
             if (randomNumber == 1)
             {
@@ -159,19 +193,21 @@ namespace WallSheet
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
+        // Các phương thức xử lý sự kiện cho các controls khác
 
-        }
+        // ...
+        // Các phương thức xử lý sự kiện cho các controls khác
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
+        private void label1_Click(object sender, EventArgs e) { }
 
-        }
+        private void textBox1_TextChanged(object sender, EventArgs e) { }
+
+        private void textBox2_TextChanged(object sender, EventArgs e) { }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            // Xử lý sự kiện khi button2 được nhấn
+            // (nếu có)
         }
 
         public double textBox3
@@ -179,21 +215,18 @@ namespace WallSheet
             get { return double.Parse(nextPrice.Text); }
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
+        private void textBox3_TextChanged(object sender, EventArgs e) { }
 
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        private void textBox4_TextChanged(object sender, EventArgs e) { }
 
         private void Show_Click_1(object sender, EventArgs e)
         {
             Random random = new Random();
-            double x = random.NextDouble() * (200 - 1) + 1; // This will give a value between 1% and 200%
+            double x = random.NextDouble() * (200 - 1) + 1;
             nextPrice.Text = x.ToString();
         }
+
     }
 }
+
+
