@@ -96,3 +96,5 @@ C:\Users\thanh\OneDrive\Document\Desktop\Laptrinhmang\DoAn\WallSheet\bin\Debug\S
 C:\Users\thanh\OneDrive\Document\Desktop\Laptrinhmang\DoAn\WallSheet\bin\Debug\Twilio.xml
 C:\Users\thanh\OneDrive\Document\Desktop\Laptrinhmang\DoAn\WallSheet\obj\Debug\WallSheet.ResetPassword.resources
 C:\Users\thanh\OneDrive\Document\Desktop\Laptrinhmang\DoAn\WallSheet\obj\Debug\WallSheet.SendCode.resources
+C:\Users\thanh\OneDrive\Document\Desktop\Laptrinhmang\DoAn\WallSheet\obj\Debug\WallSheet.Client.resources
+C:\Users\thanh\OneDrive\Document\Desktop\Laptrinhmang\DoAn\WallSheet\obj\Debug\WallSheet.Host.resources
