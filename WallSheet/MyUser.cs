@@ -19,7 +19,7 @@ namespace Firebase_Project
 
         private static string error1 = "Tài khoản không tồn tại!";
         private static string error2 = "Cảnh báo";
-        private static string error3 = "Số điện thoại đã tồn tại";
+        
         public static void ShowError()
         {
 

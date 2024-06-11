@@ -48,7 +48,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WallSheet.Properties.Resources.cach_choi_ma_soi_1;
-            this.ClientSize = new System.Drawing.Size(379, 75);
+            this.ClientSize = new System.Drawing.Size(379, 103);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonUpdatePassword);
             this.Controls.Add(this.textBoxNewPassword);

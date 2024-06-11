@@ -3,24 +3,26 @@ using FireSharp.Config;
 using FireSharp.Interfaces;
 using FireSharp.Response;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Diagnostics.Eventing.Reader;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace WallSheet
 {
-   
+
     public partial class formRegistration : Form
     {
         public formRegistration()
         {
             InitializeComponent();
+            txbPhoneNumber.KeyPress += txbPhoneNumber_KeyPress;
+            txbPhoneNumber.KeyPress += txbPhoneNumber_KeyPress;
+            txbUserrName.KeyDown += txbUserrName_KeyDown;
+            txbPassword.KeyDown += txbPassword_KeyDown;
+            txbEmail.KeyDown += txbEmail_KeyDown;
+            txbPhoneNumber.KeyDown += txbPhoneNumber_KeyDown;
+
+
+
         }
         IFirebaseConfig ifc = new FirebaseConfig()
         {
@@ -29,8 +31,30 @@ namespace WallSheet
         };
         IFirebaseClient client;
 
+        private void email(object sender, CancelEventArgs e)
+        {
+            // Regular expression for email validation
+            string pattern = @"^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$";
 
+            if (!Regex.IsMatch(txbEmail.Text, pattern))
+            {
+                MessageBox.Show("Vui lòng nhập đúng @gmail.com");
+            }
+        }
+        private void txbPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Check if the input is not a digit
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Ignore the input
+            }
+            if (txbPhoneNumber.Text.Length > 10)
+            {
+                MessageBox.Show("Vui lòng nhập đúng số điện thoại.");
+            }
 
+        }
+       
         private void formRegistration_Load(object sender, EventArgs e)
         {
 
@@ -49,13 +73,14 @@ namespace WallSheet
             if (string.IsNullOrWhiteSpace(txbUserrName.Text) ||
                 string.IsNullOrWhiteSpace(txbPassword.Text) ||
                 string.IsNullOrWhiteSpace(txbEmail.Text) ||
-                string.IsNullOrWhiteSpace(txbPhone.Text))
-                
+                string.IsNullOrWhiteSpace(txbPhoneNumber.Text))
+
             {
 
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
 
             FirebaseResponse res = client.Get(@"Users/" + txbUserrName.Text);
             MyUser ResUser = res.ResultAs<MyUser>();
@@ -76,26 +101,26 @@ namespace WallSheet
                 Password = txbPassword.Text,
                 Email = txbEmail.Text,
                 Phonenumber = txbPhoneNumber.Text
+            
+        
             };
 
             SetResponse set = client.Set(@"Users/" + txbUserrName.Text, user);
             if (set.StatusCode == System.Net.HttpStatusCode.OK)
 
-            { 
-              MessageBox.Show($"Đăng ký thành công tài khoản {txbUserrName.Text}!", "Chúc mừng!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-              
+            {
+                MessageBox.Show($"Đăng ký thành công tài khoản {txbUserrName.Text}!", "Chúc mừng!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
 
         }
 
-        public bool checkemail(string Em)
-        {
-            return Regex.IsMatch(Em, @"^[a-zA-Z0-9_.]{3,20@gmail.com(.vn|)$");
         
-        }
-       
-            private void btnBack_Click(object sender, EventArgs e)
+
+        private void btnBack_Click(object sender, EventArgs e)
         {
+            FormLogin formLogin = new FormLogin();
+            formLogin.Show();
             this.Hide();
         }
 
@@ -103,6 +128,42 @@ namespace WallSheet
         {
 
         }
+
+        private void txbUserrName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SelectNextControl((Control)sender, true, true, true, true);
+            }
+        }
+
+        private void txbPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SelectNextControl((Control)sender, true, true, true, true);
+            }
+        }
+
+        private void txbEmail_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SelectNextControl((Control)sender, true, true, true, true);
+            }
+        }
+
+        private void txbPhoneNumber_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SelectNextControl((Control)sender, true, true, true, true);
+            }
+        }
+
+
+
+
     }
-    }
+}
 

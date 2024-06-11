@@ -41,9 +41,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txbPhoneNumber = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label6 = new System.Windows.Forms.Label();
             this.LabelPhone = new System.Windows.Forms.Label();
-            this.txbPhone = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -101,6 +99,7 @@
             this.txbUserrName.Name = "txbUserrName";
             this.txbUserrName.Size = new System.Drawing.Size(284, 22);
             this.txbUserrName.TabIndex = 5;
+
             // 
             // txbPassword
             // 
@@ -158,30 +157,18 @@
             // 
             // txbPhoneNumber
             // 
-            this.txbPhoneNumber.Location = new System.Drawing.Point(35, 500);
+            this.txbPhoneNumber.Location = new System.Drawing.Point(30, 405);
             this.txbPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txbPhoneNumber.Name = "txbPhoneNumber";
-            this.txbPhoneNumber.Size = new System.Drawing.Size(319, 22);
+            this.txbPhoneNumber.Size = new System.Drawing.Size(281, 22);
             this.txbPhoneNumber.TabIndex = 12;
+         
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(37, 474);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(125, 18);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Phone Number:";
             // 
             // LabelPhone
             // 
@@ -195,24 +182,14 @@
             this.LabelPhone.TabIndex = 15;
             this.LabelPhone.Text = "PhoneNumber:";
             // 
-            // txbPhone
-            // 
-            this.txbPhone.Location = new System.Drawing.Point(27, 403);
-            this.txbPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txbPhone.Name = "txbPhone";
-            this.txbPhone.Size = new System.Drawing.Size(281, 22);
-            this.txbPhone.TabIndex = 16;
-            // 
             // formRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WallSheet.Properties.Resources.cach_choi_ma_soi_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txbPhone);
+            this.ClientSize = new System.Drawing.Size(800, 545);
             this.Controls.Add(this.LabelPhone);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.txbPhoneNumber);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnBack);
@@ -248,8 +225,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txbPhoneNumber;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label LabelPhone;
-        private System.Windows.Forms.TextBox txbPhone;
     }
 }
