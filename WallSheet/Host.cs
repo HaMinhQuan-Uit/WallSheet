@@ -15,20 +15,26 @@ namespace WallSheet
 {
     public partial class Host : Form
     {
-        private TcpListener listener; private Thread listenThread;
+        private TcpListener listener;
+        private Thread listenThread;
+        private string serverId;
+
         public Host()
         {
             InitializeComponent();
             Instance = this;
         }
+
         public static Host Instance { get; private set; }
+
         private void StartServer()
         {
             try
             {
                 listener = new TcpListener(IPAddress.Any, 8888);
                 listener.Start();
-                AppendToChatLog("Server started. Waiting for connections...");
+                serverId = Guid.NewGuid().ToString(); // Generate a unique ID for the server
+                AppendToChatLog($"Server started with ID: {serverId}. Waiting for connections...");
 
                 while (true)
                 {
@@ -113,16 +119,13 @@ namespace WallSheet
             textBox1.AppendText(message + Environment.NewLine);
         }
 
-
         private void Host_Load(object sender, EventArgs e)
         {
             listenThread = new Thread(new ThreadStart(StartServer));
             listenThread.Start();
-
-            listenThread = new Thread(new ThreadStart(StartServer));
-            listenThread.Start();
             RandomizeHostJob();
         }
+
         private void Host_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (listener != null)
@@ -155,27 +158,31 @@ namespace WallSheet
                 textBox4.Text = "Bad Stock Broker";
             }
         }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
+
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
+
         private void button2_Click(object sender, EventArgs e)
         {
 
         }
+
         public double textBox3
         {
             get { return double.Parse(nextPrice.Text); }
         }
+
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }
-
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
@@ -184,7 +191,6 @@ namespace WallSheet
 
         private void Show_Click_1(object sender, EventArgs e)
         {
-
             Random random = new Random();
             double x = random.NextDouble() * (200 - 1) + 1; // This will give a value between 1% and 200%
             nextPrice.Text = x.ToString();
