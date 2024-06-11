@@ -140,10 +140,7 @@ namespace WallSheet
         {
 
         }
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
 
-        }
         private void RandomizeHostJob()
         {
             Random random = new Random();
@@ -170,22 +167,27 @@ namespace WallSheet
         {
 
         }
-
-        private void Show_Click(object sender, EventArgs e)
+        public double textBox3
         {
-            Random random = new Random();
-            double x = random.NextDouble() * (200 - 1) + 1; // This will give a value between 1% and 200%
-            nextPrice.Text = x.ToString();
+            get { return double.Parse(nextPrice.Text); }
         }
-
-        private void nextPrice_TextChanged(object sender, EventArgs e)
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }
+
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Show_Click_1(object sender, EventArgs e)
+        {
+
+            Random random = new Random();
+            double x = random.NextDouble() * (200 - 1) + 1; // This will give a value between 1% and 200%
+            nextPrice.Text = x.ToString();
         }
     }
 }
