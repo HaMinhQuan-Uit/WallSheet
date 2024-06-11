@@ -98,3 +98,4 @@ C:\Users\thanh\OneDrive\Document\Desktop\Laptrinhmang\DoAn\WallSheet\obj\Debug\W
 C:\Users\thanh\OneDrive\Document\Desktop\Laptrinhmang\DoAn\WallSheet\obj\Debug\WallSheet.SendCode.resources
 C:\Users\thanh\OneDrive\Document\Desktop\Laptrinhmang\DoAn\WallSheet\obj\Debug\WallSheet.Client.resources
 C:\Users\thanh\OneDrive\Document\Desktop\Laptrinhmang\DoAn\WallSheet\obj\Debug\WallSheet.Host.resources
+C:\Users\thanh\OneDrive\Document\Desktop\Laptrinhmang\DoAn\WallSheet\obj\Debug\WallSheet.PVP_select.resources

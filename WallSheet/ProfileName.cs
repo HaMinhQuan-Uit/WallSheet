@@ -98,7 +98,7 @@ namespace WallSheet
 
         private void btnPVE_click_Click(object sender, EventArgs e)
         {
-            //func to connect tho PVE_random
+            //func to open PVE_random
             PVE_random pve = new PVE_random();
             pve.Show();
             this.Hide();
@@ -106,7 +106,10 @@ namespace WallSheet
 
         private void btnPVP_Click_Click(object sender, EventArgs e)
         {
-
+            //func to open PVP_select
+            PVP_select pvp = new PVP_select();
+            pvp.Show();
+            this.Hide();
         }
     }
 }

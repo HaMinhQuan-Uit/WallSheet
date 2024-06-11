@@ -163,6 +163,12 @@
     <Compile Include="PVE_random.Designer.cs">
       <DependentUpon>PVE_random.cs</DependentUpon>
     </Compile>
+    <Compile Include="PVP_select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PVP_select.Designer.cs">
+      <DependentUpon>PVP_select.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +227,9 @@
     </Compile>
     <EmbeddedResource Include="PVE_random.resx">
       <DependentUpon>PVE_random.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PVP_select.resx">
+      <DependentUpon>PVP_select.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
