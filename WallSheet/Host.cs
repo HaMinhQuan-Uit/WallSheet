@@ -15,13 +15,13 @@ namespace WallSheet
 {
     public partial class Host : Form
     {
-        private TcpListener listener;
-        private Thread listenThread;
-
+        private TcpListener listener; private Thread listenThread;
         public Host()
         {
             InitializeComponent();
+            Instance = this;
         }
+        public static Host Instance { get; private set; }
         private void StartServer()
         {
             try
@@ -54,9 +54,52 @@ namespace WallSheet
             {
                 string message = Encoding.ASCII.GetString(buffer, 0, bytesRead);
                 AppendToChatLog($"Client: {message}");
+
+                if (message == "WIN")
+                {
+                    // Client won
+                    if (textBox4.Text == "Good Stock Broker")
+                    {
+                        // Host is Good, so host wins
+                        ShowWinForm();
+                    }
+                    else
+                    {
+                        // Host is Bad, so host loses
+                        ShowLoseForm();
+                    }
+                }
+                else if (message == "LOSE")
+                {
+                    // Client lost
+                    if (textBox4.Text == "Good Stock Broker")
+                    {
+                        // Host is Good, so host loses
+                        ShowLoseForm();
+                    }
+                    else
+                    {
+                        // Host is Bad, so host wins
+                        ShowWinForm();
+                    }
+                }
             }
 
             client.Close();
+        }
+
+        private void ShowWinForm()
+        {
+            // Show the win form
+            FormWin winForm = new FormWin();
+            winForm.Show();
+        }
+
+        private void ShowLoseForm()
+        {
+            // Show the lose form
+            FormLose loseForm = new FormLose();
+            loseForm.Show();
         }
 
         private void AppendToChatLog(string message)
@@ -75,6 +118,10 @@ namespace WallSheet
         {
             listenThread = new Thread(new ThreadStart(StartServer));
             listenThread.Start();
+
+            listenThread = new Thread(new ThreadStart(StartServer));
+            listenThread.Start();
+            RandomizeHostJob();
         }
         private void Host_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -85,6 +132,58 @@ namespace WallSheet
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void RandomizeHostJob()
+        {
+            Random random = new Random();
+            int randomNumber = random.Next(0, 2); // Generates 0 or 1
+
+            if (randomNumber == 1)
+            {
+                textBox4.Text = "Good Stock Broker";
+            }
+            else
+            {
+                textBox4.Text = "Bad Stock Broker";
+            }
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Show_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            double x = random.NextDouble() * (200 - 1) + 1; // This will give a value between 1% and 200%
+            nextPrice.Text = x.ToString();
+        }
+
+        private void nextPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -14,12 +14,7 @@ namespace WallSheet
 {
     public partial class Client : Form
     {
-        private TcpClient client;
-        private NetworkStream stream;
-        private Random random = new Random();
-        private List<KeyValuePair<int, double>> dataPoints = new List<KeyValuePair<int, double>>(); // Add this line
-        private int turn = 1; // Add this line
-
+        private TcpClient client; private NetworkStream stream; private Random random = new Random(); private List<KeyValuePair<int, double>> dataPoints = new List<KeyValuePair<int, double>>(); // Add this line private int turn = 1; // Add this line
         public Client()
         {
             InitializeComponent();
@@ -192,6 +187,7 @@ namespace WallSheet
                 FormWin winForm = new FormWin();
                 winForm.Show();
                 this.Close();
+                SendMessageToServer("WIN");
             }
             else if (turn == 0)
             {
@@ -199,7 +195,13 @@ namespace WallSheet
                 FormLose loseForm = new FormLose();
                 loseForm.Show();
                 this.Close();
+                SendMessageToServer("LOSE");
             }
+        }
+        private void SendMessageToServer(string message)
+        {
+            byte[] buffer = Encoding.ASCII.GetBytes(message);
+            stream.Write(buffer, 0, buffer.Length);
         }
         private void SkipTurn()
         {
@@ -221,6 +223,8 @@ namespace WallSheet
         private void button3_Click(object sender, EventArgs e)
         {
             SkipTurn();
+            double x = random.NextDouble() * (200 - 1) + 1; //give a value between 1% and 200%
+            Price.Text = x.ToString();
             int m = int.Parse(Turn.Text);
             double z = double.Parse(Budget.Text);
             Budget.Text = z.ToString();
@@ -236,3 +240,4 @@ namespace WallSheet
         }
     }
 }
+    
