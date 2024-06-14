@@ -53,7 +53,24 @@ namespace WallSheet
                 while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) > 0)
                 {
                     string message = Encoding.ASCII.GetString(buffer, 0, bytesRead);
-                    AppendToChatLog($"Server: {message}");
+                    if (message.StartsWith("PRICE:"))
+                    {
+                        // Extract the price from the message
+                        string priceStr = message.Substring("PRICE:".Length);
+                        double price;
+                        if (double.TryParse(priceStr, out price))
+                        {
+                            // Update the Price textBox on the UI thread
+                            this.Invoke((MethodInvoker)delegate
+                            {
+                                Price.Text = price.ToString("F2");
+                            });
+                        }
+                    }
+                    else
+                    {
+                        AppendToChatLog($"Server: {message}");
+                    }
                 }
             }
             catch (Exception ex)
