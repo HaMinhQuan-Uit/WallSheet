@@ -219,9 +219,10 @@ namespace WallSheet
             Random random = new Random();
             double x = random.NextDouble() * (200 - 1) + 1;
             nextPrice.Text = x.ToString();
+            // Send the price to clients but they will display it only after receiving the DISPLAY_PRICE command
             SendPriceToClients(x);
-
         }
+
         private void SendPriceToClients(double price)
         {
             string message = $"PRICE:{price}";
@@ -240,7 +241,29 @@ namespace WallSheet
                 }
             }
         }
+        private void SendDisplayPriceCommand()
+        {
+            string message = "DISPLAY_PRICE";
+            byte[] buffer = Encoding.ASCII.GetBytes(message);
 
+            foreach (var client in clients)
+            {
+                try
+                {
+                    NetworkStream stream = client.GetStream();
+                    stream.Write(buffer, 0, buffer.Length);
+                }
+                catch (Exception)
+                {
+                    // Handle client disconnection if necessary
+                }
+            }
+        }
+
+        private void RevealPrice_Click(object sender, EventArgs e)
+        {
+            SendDisplayPriceCommand();
+        }
     }
 }
 

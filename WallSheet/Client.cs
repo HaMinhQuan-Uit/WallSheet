@@ -43,6 +43,17 @@ namespace WallSheet
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        public void DisplayPriceIfNeeded()
+        {
+            if (shouldDisplayPrice)
+            {
+                this.Invoke((MethodInvoker)delegate
+                {
+                    Price.Text = hiddenPrice.Text; // Now update the Price TextBox
+                    shouldDisplayPrice = false; // Reset the flag
+                });
+            }
+        }
         private void Client_Load(object sender, EventArgs e)
         {
             ConnectToServer();
@@ -58,6 +69,7 @@ namespace WallSheet
             Target.Text = target.ToString("F2");
             Quantity.Text = quantity.ToString();
         }
+        private bool shouldDisplayPrice = false;
         private void ReceiveMessages()
         {
             try
@@ -69,15 +81,14 @@ namespace WallSheet
                     string message = Encoding.ASCII.GetString(buffer, 0, bytesRead);
                     if (message.StartsWith("PRICE:"))
                     {
-                        // Extract the price from the message
                         string priceStr = message.Substring("PRICE:".Length);
                         double price;
                         if (double.TryParse(priceStr, out price))
                         {
                             this.Invoke((MethodInvoker)delegate
                             {
-                                hiddenPrice.Text = price.ToString("F2"); // Update hiddenPrice instead of Price
-                                Price.Text = price.ToString("F2"); // If you still want to show the price
+                                hiddenPrice.Text = price.ToString("F2");
+                                shouldDisplayPrice = true; // Set the flag to true
                             });
                         }
                     }
