@@ -199,11 +199,6 @@ namespace WallSheet
 
         private void textBox2_TextChanged(object sender, EventArgs e) { }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            // Xử lý sự kiện khi button2 được nhấn
-            // (nếu có)
-        }
 
         public double textBox3
         {
@@ -241,29 +236,7 @@ namespace WallSheet
                 }
             }
         }
-        private void SendDisplayPriceCommand()
-        {
-            string message = "DISPLAY_PRICE";
-            byte[] buffer = Encoding.ASCII.GetBytes(message);
-
-            foreach (var client in clients)
-            {
-                try
-                {
-                    NetworkStream stream = client.GetStream();
-                    stream.Write(buffer, 0, buffer.Length);
-                }
-                catch (Exception)
-                {
-                    // Handle client disconnection if necessary
-                }
-            }
-        }
-
-        private void RevealPrice_Click(object sender, EventArgs e)
-        {
-            SendDisplayPriceCommand();
-        }
+       
     }
 }
 

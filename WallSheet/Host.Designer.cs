@@ -38,7 +38,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Show = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.RevealPrice = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -113,22 +112,11 @@
             this.textBox4.TabIndex = 6;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // RevealPrice
-            // 
-            this.RevealPrice.Location = new System.Drawing.Point(377, 78);
-            this.RevealPrice.Name = "RevealPrice";
-            this.RevealPrice.Size = new System.Drawing.Size(126, 23);
-            this.RevealPrice.TabIndex = 7;
-            this.RevealPrice.Text = "Reveal";
-            this.RevealPrice.UseVisualStyleBackColor = true;
-            this.RevealPrice.Click += new System.EventHandler(this.RevealPrice_Click);
-            // 
             // Host
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 450);
-            this.Controls.Add(this.RevealPrice);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.Show);
             this.Controls.Add(this.label1);
@@ -154,6 +142,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Show;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button RevealPrice;
     }
 }
