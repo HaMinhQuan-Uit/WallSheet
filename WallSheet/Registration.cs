@@ -100,6 +100,7 @@ namespace WallSheet
                 MessageBox.Show("Mật khẩu không khớp", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            
             MyUser user = new MyUser()
             {
                 Username = txbUserrName.Text,

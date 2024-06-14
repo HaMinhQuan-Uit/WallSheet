@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|e:\\study\\nt106_ltm\\doan3\\wallsheet\\wallsheet\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|e:\\study\\nt106_ltm\\doan3\\wallsheet\\wallsheet\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\resetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -74,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -102,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Registration.cs [Design]",
               "DocumentMoniker": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\Registration.cs",
               "RelativeDocumentMoniker": "Registration.cs",
@@ -114,15 +114,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Registration.cs",
               "DocumentMoniker": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\Registration.cs",
               "RelativeDocumentMoniker": "Registration.cs",
               "ToolTip": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\Registration.cs",
               "RelativeToolTip": "Registration.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAewFsAAAAAAAAA",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAnwGAAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T06:40:26.378Z"
+              "WhenOpened": "2024-05-17T06:40:26.378Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
