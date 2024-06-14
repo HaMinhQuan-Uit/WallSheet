@@ -51,6 +51,7 @@
             this.Budget = new System.Windows.Forms.TextBox();
             this.Quantity = new System.Windows.Forms.TextBox();
             this.Price = new System.Windows.Forms.TextBox();
+            this.hiddenPrice = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -246,11 +247,22 @@
             this.Price.TabIndex = 16;
             this.Price.TextChanged += new System.EventHandler(this.Price_TextChanged);
             // 
+            // hiddenPrice
+            // 
+            this.hiddenPrice.Location = new System.Drawing.Point(32, 258);
+            this.hiddenPrice.Name = "hiddenPrice";
+            this.hiddenPrice.ReadOnly = true;
+            this.hiddenPrice.Size = new System.Drawing.Size(100, 22);
+            this.hiddenPrice.TabIndex = 32;
+            this.hiddenPrice.Visible = false;
+            this.hiddenPrice.TextChanged += new System.EventHandler(this.hiddenPrice_TextChanged);
+            // 
             // Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1077, 673);
+            this.Controls.Add(this.hiddenPrice);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.chart1);
@@ -300,5 +312,6 @@
         private System.Windows.Forms.TextBox Budget;
         private System.Windows.Forms.TextBox Quantity;
         private System.Windows.Forms.TextBox Price;
+        private System.Windows.Forms.TextBox hiddenPrice;
     }
 }

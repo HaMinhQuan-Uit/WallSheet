@@ -193,22 +193,12 @@ namespace WallSheet
             }
         }
 
-        // Các phương thức xử lý sự kiện cho các controls khác
-
-        // ...
-        // Các phương thức xử lý sự kiện cho các controls khác
-
         private void label1_Click(object sender, EventArgs e) { }
 
         private void textBox1_TextChanged(object sender, EventArgs e) { }
 
         private void textBox2_TextChanged(object sender, EventArgs e) { }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            // Xử lý sự kiện khi button2 được nhấn
-            // (nếu có)
-        }
 
         public double textBox3
         {
@@ -224,9 +214,10 @@ namespace WallSheet
             Random random = new Random();
             double x = random.NextDouble() * (200 - 1) + 1;
             nextPrice.Text = x.ToString();
+            // Send the price to clients but they will display it only after receiving the DISPLAY_PRICE command
             SendPriceToClients(x);
-
         }
+
         private void SendPriceToClients(double price)
         {
             string message = $"PRICE:{price}";
@@ -245,7 +236,7 @@ namespace WallSheet
                 }
             }
         }
-
+       
     }
 }
 

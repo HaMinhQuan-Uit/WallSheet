@@ -43,42 +43,17 @@ namespace WallSheet
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void ReceiveMessages()
+        public void DisplayPriceIfNeeded()
         {
-            try
+            if (shouldDisplayPrice)
             {
-                byte[] buffer = new byte[1024];
-                int bytesRead;
-                while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) > 0)
+                this.Invoke((MethodInvoker)delegate
                 {
-                    string message = Encoding.ASCII.GetString(buffer, 0, bytesRead);
-                    if (message.StartsWith("PRICE:"))
-                    {
-                        // Extract the price from the message
-                        string priceStr = message.Substring("PRICE:".Length);
-                        double price;
-                        if (double.TryParse(priceStr, out price))
-                        {
-                            // Update the Price textBox on the UI thread
-                            this.Invoke((MethodInvoker)delegate
-                            {
-                                Price.Text = price.ToString("F2");
-                            });
-                        }
-                    }
-                    else
-                    {
-                        AppendToChatLog($"Server: {message}");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                AppendToChatLog($"Error receiving data: {ex.Message}");
+                    Price.Text = hiddenPrice.Text; // Now update the Price TextBox
+                    shouldDisplayPrice = false; // Reset the flag
+                });
             }
         }
-
         private void Client_Load(object sender, EventArgs e)
         {
             ConnectToServer();
@@ -93,6 +68,40 @@ namespace WallSheet
             Budget.Text = budget.ToString("F2");
             Target.Text = target.ToString("F2");
             Quantity.Text = quantity.ToString();
+        }
+        private bool shouldDisplayPrice = false;
+        private void ReceiveMessages()
+        {
+            try
+            {
+                byte[] buffer = new byte[1024];
+                int bytesRead;
+                while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) > 0)
+                {
+                    string message = Encoding.ASCII.GetString(buffer, 0, bytesRead);
+                    if (message.StartsWith("PRICE:"))
+                    {
+                        string priceStr = message.Substring("PRICE:".Length);
+                        double price;
+                        if (double.TryParse(priceStr, out price))
+                        {
+                            this.Invoke((MethodInvoker)delegate
+                            {
+                                hiddenPrice.Text = price.ToString("F2");
+                                shouldDisplayPrice = true; // Set the flag to true
+                            });
+                        }
+                    }
+                    else
+                    {
+                        AppendToChatLog($"Server: {message}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                AppendToChatLog($"Error receiving data: {ex.Message}");
+            }
         }
 
         private void btnSend_Click(object sender, EventArgs e)
@@ -145,10 +154,28 @@ namespace WallSheet
             HandleBuy();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SkipTurn();
+        }
+        private void SkipTurn()
+        {
+            turn++;
+            int m = int.Parse(Turn.Text);
+            m--;
+            double x = double.Parse(hiddenPrice.Text); // Use hiddenPrice value
+            double z = double.Parse(Budget.Text);
+            dataPoints.Add(new KeyValuePair<int, double>(turn, z));
+            UpdateChart(dataPoints);
+            Turn.Text = m.ToString();
+            Price.Text = x.ToString();
+            Budget.Text = z.ToString();
+            CheckWinLose(z, m);
+        }
         private void HandleSell()
         {
             int a = int.Parse(textBox5.Text);
-            double x = Host.Instance.textBox3;
+            double x = double.Parse(hiddenPrice.Text); // Use hiddenPrice value
             double z = double.Parse(Budget.Text);
             int y = int.Parse(Quantity.Text);
             int m = int.Parse(Turn.Text);
@@ -172,7 +199,7 @@ namespace WallSheet
         private void HandleBuy()
         {
             int a = int.Parse(textBox5.Text);
-            double x = Host.Instance.textBox3;
+            double x = double.Parse(hiddenPrice.Text); // Use hiddenPrice value
             double z = double.Parse(Budget.Text);
             int y = int.Parse(Quantity.Text);
             int m = int.Parse(Turn.Text);
@@ -241,27 +268,6 @@ namespace WallSheet
             }
         }
 
-        private void SkipTurn()
-        {
-            turn++;
-            int m = int.Parse(Turn.Text);
-            m--;
-            double z = double.Parse(Budget.Text);
-            dataPoints.Add(new KeyValuePair<int, double>(turn, z));
-            UpdateChart(dataPoints);
-            Turn.Text = m.ToString();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            SkipTurn();
-            double x = Host.Instance.textBox3;
-            Price.Text = x.ToString();
-            int m = int.Parse(Turn.Text);
-            double z = double.Parse(Budget.Text);
-            Budget.Text = z.ToString();
-            CheckWinLose(z, m);
-        }
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -279,6 +285,11 @@ namespace WallSheet
                 byte[] buffer = Encoding.ASCII.GetBytes(message);
                 stream.Write(buffer, 0, buffer.Length);
             }
+        }
+
+        private void hiddenPrice_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
