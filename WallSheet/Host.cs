@@ -193,11 +193,6 @@ namespace WallSheet
             }
         }
 
-        // Các phương thức xử lý sự kiện cho các controls khác
-
-        // ...
-        // Các phương thức xử lý sự kiện cho các controls khác
-
         private void label1_Click(object sender, EventArgs e) { }
 
         private void textBox1_TextChanged(object sender, EventArgs e) { }
