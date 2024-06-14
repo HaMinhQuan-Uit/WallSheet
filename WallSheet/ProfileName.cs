@@ -30,7 +30,7 @@ namespace WallSheet
 
         private void label2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btn_Home_Click(object sender, EventArgs e)
@@ -40,12 +40,12 @@ namespace WallSheet
 
         private void label2_Click_1(object sender, EventArgs e)
         {
-            
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -66,17 +66,20 @@ namespace WallSheet
         {
             if (e.KeyCode == Keys.Enter)
             {
-               // btnSend_click.PerformClick();
+                // btnSend_click.PerformClick();
             }
         }
 
         private void btn_Chat_Click(object sender, EventArgs e)
         {
-           Button btn = new Button();
-            btn.Text = " LogOut ";
-            btn.AutoSize = true;
 
-            panel2.Controls.Add(btn);
+
+        }
+        private void Btn_LogOut_Click(object sender, EventArgs e)
+        {
+            FormLogin formLogin = new FormLogin();
+            formLogin.Show();
+            this.Close();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -110,6 +113,19 @@ namespace WallSheet
             PVP_select pvp = new PVP_select();
             pvp.Show();
             this.Hide();
+        }
+
+        private void btnSetting_Click_Click(object sender, EventArgs e)
+        {
+
+            Button btn = new Button();
+            btn.Text = " LogOut ";
+            btn.AutoSize = true;
+            btn.Font = new Font("Arial", 12);
+            btn.Location = new Point(panel4.Width - btn.Width - 10, panel4.Height - btn.Height - 10);
+            btn.BackColor = Color.BlueViolet;
+            btn.Click += Btn_LogOut_Click;
+            panel4.Controls.Add(btn);
         }
     }
 }

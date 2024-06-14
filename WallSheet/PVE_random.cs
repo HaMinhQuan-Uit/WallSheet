@@ -200,5 +200,10 @@ namespace WallSheet
             loseForm.Show();
             this.Close();
         }
+
+        private void Budget_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

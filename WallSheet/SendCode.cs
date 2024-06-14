@@ -125,5 +125,12 @@ namespace WallSheet
         {
             InitializeFirebase();
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            FormLogin formLogin = new FormLogin();
+            formLogin.Show();
+            this.Close();
+        }
     }
 }

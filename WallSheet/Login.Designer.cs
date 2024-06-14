@@ -47,11 +47,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Impact", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.IndianRed;
-            this.label1.Location = new System.Drawing.Point(227, 9);
+            this.label1.Location = new System.Drawing.Point(231, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(305, 75);
+            this.label1.Size = new System.Drawing.Size(314, 75);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Wall Sheet";
+            this.label1.Text = "Wall Street";
             // 
             // label2
             // 
@@ -101,17 +101,19 @@
             // 
             // txbUserName
             // 
+            this.txbUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbUserName.Location = new System.Drawing.Point(129, 145);
             this.txbUserName.Name = "txbUserName";
-            this.txbUserName.Size = new System.Drawing.Size(225, 22);
+            this.txbUserName.Size = new System.Drawing.Size(225, 27);
             this.txbUserName.TabIndex = 5;
             // 
             // txbPassword
             // 
+            this.txbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbPassword.Location = new System.Drawing.Point(129, 195);
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.PasswordChar = '*';
-            this.txbPassword.Size = new System.Drawing.Size(225, 22);
+            this.txbPassword.Size = new System.Drawing.Size(225, 27);
             this.txbPassword.TabIndex = 6;
             this.txbPassword.UseSystemPasswordChar = true;
             // 

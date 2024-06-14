@@ -12,6 +12,7 @@ using FireSharp.Interfaces;
 using FireSharp.Config;
 using Firebase_Project;
 using System.Diagnostics.Eventing.Reader;
+using System.Security.Cryptography;
 namespace WallSheet
 {
     public partial class FormLogin : Form
@@ -19,6 +20,8 @@ namespace WallSheet
         public FormLogin()
         {
             InitializeComponent();
+            txbUserName.KeyDown += Txb_KeyDown;
+            txbPassword.KeyDown += Txb_KeyDown;
         }
 
         IFirebaseConfig ifc = new FirebaseConfig()
@@ -27,6 +30,22 @@ namespace WallSheet
             BasePath = "https://masoi-558cc-default-rtdb.firebaseio.com/"
         };
 
+        private string ComputeSha256Hash(string rawData)
+        {
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                // Compute the hash. This returns the hash as a byte array.
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(rawData));
+
+                // Convert byte array to a string
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
 
         IFirebaseClient client;
 
@@ -45,36 +64,30 @@ namespace WallSheet
         }
         private void btnLogin_click_Click(object sender, EventArgs e)
         {
-            
             if (string.IsNullOrWhiteSpace(txbUserName.Text) ||
-               string.IsNullOrWhiteSpace(txbPassword.Text))
+                string.IsNullOrWhiteSpace(txbPassword.Text))
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+
             FirebaseResponse res = client.Get(@"Users/" + txbUserName.Text);
             MyUser ResUser = res.ResultAs<MyUser>();
 
-            MyUser CurUser = new MyUser()
-            {
-                Username = txbUserName.Text,
-                Password = txbPassword.Text,
+            // Mã hóa mật khẩu nhập vào
+            string hashedPassword = ComputeSha256Hash(txbPassword.Text);
 
-            };
-
-            if (MyUser.IsEqual(ResUser, CurUser) == true)
+            if (ResUser != null && ResUser.Password == hashedPassword)
             {
-                ProfileName profileName= new ProfileName();
+                ProfileName profileName = new ProfileName();
                 this.Hide();
                 profileName.Show();
             }
             else
             {
                 MyUser.ShowError();
-
             }
         }
-
         private void btnResgiter_click_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -95,5 +108,15 @@ namespace WallSheet
             SendCode sendCode = new SendCode();
             sendCode.Show();
         }
+        private void Txb_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_click_Click(sender, e);
+            }
+        }
+        
+
+
     }
 }

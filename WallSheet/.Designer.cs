@@ -96,32 +96,36 @@
             // txbUserrName
             // 
             this.txbUserrName.CausesValidation = false;
+            this.txbUserrName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbUserrName.Location = new System.Drawing.Point(27, 203);
             this.txbUserrName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbUserrName.Name = "txbUserrName";
-            this.txbUserrName.Size = new System.Drawing.Size(284, 22);
+            this.txbUserrName.Size = new System.Drawing.Size(284, 27);
             this.txbUserrName.TabIndex = 5;
             // 
             // txbPassword
             // 
+            this.txbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.txbPassword.Location = new System.Drawing.Point(29, 281);
             this.txbPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.PasswordChar = '*';
-            this.txbPassword.Size = new System.Drawing.Size(281, 22);
+            this.txbPassword.Size = new System.Drawing.Size(281, 27);
             this.txbPassword.TabIndex = 6;
             this.txbPassword.UseSystemPasswordChar = true;
             // 
             // txbEmail
             // 
+            this.txbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.txbEmail.Location = new System.Drawing.Point(33, 417);
             this.txbEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbEmail.Name = "txbEmail";
-            this.txbEmail.Size = new System.Drawing.Size(281, 22);
+            this.txbEmail.Size = new System.Drawing.Size(281, 27);
             this.txbEmail.TabIndex = 8;
             // 
             // btnReg
             // 
+            this.btnReg.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReg.Location = new System.Drawing.Point(362, 374);
             this.btnReg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -129,11 +133,12 @@
             this.btnReg.Size = new System.Drawing.Size(140, 39);
             this.btnReg.TabIndex = 9;
             this.btnReg.Text = "Register";
-            this.btnReg.UseVisualStyleBackColor = true;
+            this.btnReg.UseVisualStyleBackColor = false;
             this.btnReg.Click += new System.EventHandler(this.btnReg_Click);
             // 
             // btnBack
             // 
+            this.btnBack.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(521, 374);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -141,7 +146,7 @@
             this.btnBack.Size = new System.Drawing.Size(140, 39);
             this.btnBack.TabIndex = 10;
             this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // label4
@@ -152,16 +157,17 @@
             this.label4.ForeColor = System.Drawing.Color.IndianRed;
             this.label4.Location = new System.Drawing.Point(276, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(305, 75);
+            this.label4.Size = new System.Drawing.Size(314, 75);
             this.label4.TabIndex = 11;
-            this.label4.Text = "Wall Sheet";
+            this.label4.Text = "Wall Street";
             // 
             // txbPhoneNumber
             // 
-            this.txbPhoneNumber.Location = new System.Drawing.Point(27, 479);
+            this.txbPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txbPhoneNumber.Location = new System.Drawing.Point(33, 479);
             this.txbPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txbPhoneNumber.Name = "txbPhoneNumber";
-            this.txbPhoneNumber.Size = new System.Drawing.Size(281, 22);
+            this.txbPhoneNumber.Size = new System.Drawing.Size(281, 27);
             this.txbPhoneNumber.TabIndex = 12;
             // 
             // contextMenuStrip1
@@ -184,11 +190,12 @@
             // 
             // txbConfirmPass
             // 
+            this.txbConfirmPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.txbConfirmPass.Location = new System.Drawing.Point(27, 347);
             this.txbConfirmPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbConfirmPass.Name = "txbConfirmPass";
             this.txbConfirmPass.PasswordChar = '*';
-            this.txbConfirmPass.Size = new System.Drawing.Size(281, 22);
+            this.txbConfirmPass.Size = new System.Drawing.Size(281, 27);
             this.txbConfirmPass.TabIndex = 16;
             this.txbConfirmPass.UseSystemPasswordChar = true;
             // 

@@ -57,7 +57,7 @@
             btn_Home.BackColor = System.Drawing.Color.Teal;
             btn_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             btn_Home.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            btn_Home.Image = global::WallSheet.Properties.Resources.Screenshot_2024_05_23_234007;
+            btn_Home.Image = global::WallSheet.Properties.Resources.Screenshot_2024_06_14_233203;
             btn_Home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             btn_Home.Location = new System.Drawing.Point(11, 28);
             btn_Home.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -73,7 +73,7 @@
             btn_Chat.BackColor = System.Drawing.Color.Teal;
             btn_Chat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             btn_Chat.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F);
-            btn_Chat.Image = global::WallSheet.Properties.Resources.Screenshot_2024_05_23_2344321;
+            btn_Chat.Image = global::WallSheet.Properties.Resources.Screenshot_2024_06_14_233113;
             btn_Chat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             btn_Chat.Location = new System.Drawing.Point(11, 121);
             btn_Chat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -89,7 +89,7 @@
             btnSetting_Click.BackColor = System.Drawing.Color.Teal;
             btnSetting_Click.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             btnSetting_Click.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F);
-            btnSetting_Click.Image = global::WallSheet.Properties.Resources.Screenshot_2024_05_23_2344321;
+            btnSetting_Click.Image = global::WallSheet.Properties.Resources.Screenshot_2024_06_14_233023;
             btnSetting_Click.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             btnSetting_Click.Location = new System.Drawing.Point(11, 218);
             btnSetting_Click.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -98,6 +98,7 @@
             btnSetting_Click.TabIndex = 5;
             btnSetting_Click.Text = "Setting";
             btnSetting_Click.UseVisualStyleBackColor = false;
+            btnSetting_Click.Click += new System.EventHandler(this.btnSetting_Click_Click);
             // 
             // panel1
             // 
@@ -180,20 +181,21 @@
             // 
             // btnPVE_click
             // 
+            this.btnPVE_click.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnPVE_click.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F);
-            this.btnPVE_click.Location = new System.Drawing.Point(19, 357);
+            this.btnPVE_click.Location = new System.Drawing.Point(77, 358);
             this.btnPVE_click.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPVE_click.Name = "btnPVE_click";
             this.btnPVE_click.Size = new System.Drawing.Size(88, 41);
             this.btnPVE_click.TabIndex = 2;
             this.btnPVE_click.Text = "PVE";
-            this.btnPVE_click.UseVisualStyleBackColor = true;
+            this.btnPVE_click.UseVisualStyleBackColor = false;
             this.btnPVE_click.Click += new System.EventHandler(this.btnPVE_click_Click);
             // 
             // btnPVP_Click
             // 
             this.btnPVP_Click.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F);
-            this.btnPVP_Click.Location = new System.Drawing.Point(19, 463);
+            this.btnPVP_Click.Location = new System.Drawing.Point(77, 454);
             this.btnPVP_Click.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPVP_Click.Name = "btnPVP_Click";
             this.btnPVP_Click.Size = new System.Drawing.Size(88, 37);
