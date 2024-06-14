@@ -73,7 +73,8 @@ namespace WallSheet
             if (string.IsNullOrWhiteSpace(txbUserrName.Text) ||
                 string.IsNullOrWhiteSpace(txbPassword.Text) ||
                 string.IsNullOrWhiteSpace(txbEmail.Text) ||
-                string.IsNullOrWhiteSpace(txbPhoneNumber.Text))
+                string.IsNullOrWhiteSpace(txbPhoneNumber.Text) ||
+                string.IsNullOrWhiteSpace(txbConfirmPass.Text))
 
             {
 
@@ -94,13 +95,18 @@ namespace WallSheet
                 MyUser.ShowError_2();
                 return;
             }
-
+            if(txbPassword.Text != txbConfirmPass.Text)
+            {
+                MessageBox.Show("Mật khẩu không khớp", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             MyUser user = new MyUser()
             {
                 Username = txbUserrName.Text,
                 Password = txbPassword.Text,
                 Email = txbEmail.Text,
                 Phonenumber = txbPhoneNumber.Text
+                
             
         
             };
@@ -116,7 +122,7 @@ namespace WallSheet
         }
 
         
-
+        
         private void btnBack_Click(object sender, EventArgs e)
         {
             FormLogin formLogin = new FormLogin();

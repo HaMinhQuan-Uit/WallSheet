@@ -42,6 +42,8 @@
             this.txbPhoneNumber = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.LabelPhone = new System.Windows.Forms.Label();
+            this.txbConfirmPass = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -85,7 +87,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(27, 324);
+            this.label5.Location = new System.Drawing.Point(30, 397);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 18);
             this.label5.TabIndex = 4;
@@ -99,7 +101,6 @@
             this.txbUserrName.Name = "txbUserrName";
             this.txbUserrName.Size = new System.Drawing.Size(284, 22);
             this.txbUserrName.TabIndex = 5;
-
             // 
             // txbPassword
             // 
@@ -113,7 +114,7 @@
             // 
             // txbEmail
             // 
-            this.txbEmail.Location = new System.Drawing.Point(29, 345);
+            this.txbEmail.Location = new System.Drawing.Point(33, 417);
             this.txbEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(281, 22);
@@ -157,12 +158,11 @@
             // 
             // txbPhoneNumber
             // 
-            this.txbPhoneNumber.Location = new System.Drawing.Point(30, 405);
+            this.txbPhoneNumber.Location = new System.Drawing.Point(27, 479);
             this.txbPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txbPhoneNumber.Name = "txbPhoneNumber";
             this.txbPhoneNumber.Size = new System.Drawing.Size(281, 22);
             this.txbPhoneNumber.TabIndex = 12;
-         
             // 
             // contextMenuStrip1
             // 
@@ -176,11 +176,33 @@
             this.LabelPhone.BackColor = System.Drawing.Color.Transparent;
             this.LabelPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelPhone.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.LabelPhone.Location = new System.Drawing.Point(28, 383);
+            this.LabelPhone.Location = new System.Drawing.Point(24, 457);
             this.LabelPhone.Name = "LabelPhone";
             this.LabelPhone.Size = new System.Drawing.Size(120, 18);
             this.LabelPhone.TabIndex = 15;
             this.LabelPhone.Text = "PhoneNumber:";
+            // 
+            // txbConfirmPass
+            // 
+            this.txbConfirmPass.Location = new System.Drawing.Point(27, 347);
+            this.txbConfirmPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txbConfirmPass.Name = "txbConfirmPass";
+            this.txbConfirmPass.PasswordChar = '*';
+            this.txbConfirmPass.Size = new System.Drawing.Size(281, 22);
+            this.txbConfirmPass.TabIndex = 16;
+            this.txbConfirmPass.UseSystemPasswordChar = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(30, 327);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(147, 18);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "ConfirmPassWord";
             // 
             // formRegistration
             // 
@@ -189,6 +211,8 @@
             this.BackgroundImage = global::WallSheet.Properties.Resources.cach_choi_ma_soi_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 545);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txbConfirmPass);
             this.Controls.Add(this.LabelPhone);
             this.Controls.Add(this.txbPhoneNumber);
             this.Controls.Add(this.label4);
@@ -226,5 +250,7 @@
         private System.Windows.Forms.TextBox txbPhoneNumber;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label LabelPhone;
+        private System.Windows.Forms.TextBox txbConfirmPass;
+        private System.Windows.Forms.Label label6;
     }
 }
