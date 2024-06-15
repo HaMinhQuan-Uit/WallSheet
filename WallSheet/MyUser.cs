@@ -1,9 +1,8 @@
-﻿using System;
+﻿using FireSharp.Config;
+using FireSharp.Interfaces;
+using FireSharp.Response;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,19 +18,41 @@ namespace Firebase_Project
 
         private static string error1 = "Tài khoản không tồn tại!";
         private static string error2 = "Cảnh báo";
-        
+
+        private static IFirebaseConfig ifc = new FirebaseConfig()
+        {
+            AuthSecret = "UYaSCRpXgQFANuKeFHlhq5l6DZLMcmtNXkZjL1nJ",
+            BasePath = "https://masoi-558cc-default-rtdb.firebaseio.com/"
+        };
+
+        private static IFirebaseClient client;
+
+        static MyUser()
+        {
+            try
+            {
+                client = new FireSharp.FirebaseClient(ifc);
+                if (client == null)
+                {
+                    throw new Exception("Client is null, failed to create FireSharp client.");
+                }
+                MessageBox.Show("Firebase connection established successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to initialize Firebase client: {ex.Message}", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         public static void ShowError()
         {
-
-            System.Windows.Forms.MessageBox.Show(error1, error2, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show(error1, error2, MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         public static void ShowError_2()
         {
-            System.Windows.Forms.MessageBox.Show("Tài khoản đã tồn tại!", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+            MessageBox.Show("Tài khoản đã tồn tại!", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
-       
 
         public static bool IsEqual(MyUser user1, MyUser user2)
         {
@@ -42,7 +63,6 @@ namespace Firebase_Project
                 error1 = "Tài khoản không tồn tại!";
                 return false;
             }
-
             else if (user1.Password != user2.Password)
             {
                 error1 = "Sai tài khoản hoặc mật khẩu!";
@@ -63,16 +83,35 @@ namespace Firebase_Project
 
             if (user1.Username != user2.Username)
             {
-                System.Windows.Forms.MessageBox.Show("Tài khoản không tồn tại!", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Tài khoản không tồn tại!", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
-             
             }
-         
+
             return true;
         }
-        
-      
-    
-        
+
+        public static async Task<bool> IsEmailExistsAsync(string email)
+        {
+            try
+            {
+                FirebaseResponse response = await client.GetAsync("Users");
+                var users = response.ResultAs<Dictionary<string, MyUser>>();
+
+                foreach (var user in users)
+                {
+                    if (user.Value.Email == email)
+                    {
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error checking email: {ex.Message}");
+                return false;
+            }
+        }
     }
 }

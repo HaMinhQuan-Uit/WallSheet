@@ -85,9 +85,9 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label3.Location = new System.Drawing.Point(25, 154);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 25);
+            this.label3.Size = new System.Drawing.Size(65, 25);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Phone";
+            this.label3.Text = "Email";
             // 
             // label4
             // 
@@ -106,7 +106,7 @@
             this.textBox1.Location = new System.Drawing.Point(128, 245);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(214, 41);
+            this.textBox1.Size = new System.Drawing.Size(266, 41);
             this.textBox1.TabIndex = 6;
             // 
             // textBox2
@@ -115,7 +115,7 @@
             this.textBox2.Location = new System.Drawing.Point(128, 157);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(214, 35);
+            this.textBox2.Size = new System.Drawing.Size(266, 35);
             this.textBox2.TabIndex = 7;
             // 
             // btn_back
@@ -135,7 +135,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WallSheet.Properties.Resources.cach_choi_ma_soi_1;
-            this.ClientSize = new System.Drawing.Size(395, 359);
+            this.ClientSize = new System.Drawing.Size(424, 359);
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
