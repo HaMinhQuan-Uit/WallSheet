@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Net.Sockets;
+using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -27,22 +28,50 @@ namespace WallSheet
             InitializeComponent();
         }
 
+
         private void ConnectToServer()
         {
             try
             {
-                client = new TcpClient("127.0.0.1", 8888);
-                stream = client.GetStream();
-                AppendToChatLog("Connected to server.");
+                string serverIp = DiscoverServer();
+                if (serverIp != null)
+                {
+                    client = new TcpClient(serverIp, 8888);
+                    stream = client.GetStream();
+                    AppendToChatLog("Đã kết nối tới server.");
 
-                receiveThread = new Thread(ReceiveMessages);
-                receiveThread.Start();
+                    receiveThread = new Thread(ReceiveMessages);
+                    receiveThread.Start();
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Lỗi: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private string DiscoverServer()
+        {
+            UdpClient udpClient = new UdpClient();
+            udpClient.EnableBroadcast = true;
+            IPEndPoint endPoint = new IPEndPoint(IPAddress.Broadcast, 8889);
+
+            byte[] sendBytes = Encoding.ASCII.GetBytes("DISCOVER_SERVER");
+            udpClient.Send(sendBytes, sendBytes.Length, endPoint);
+
+            udpClient.Client.ReceiveTimeout = 5000;
+            try
+            {
+                byte[] receiveBytes = udpClient.Receive(ref endPoint);
+                string serverIp = Encoding.ASCII.GetString(receiveBytes);
+                return serverIp;
+            }
+            catch (SocketException)
+            {
+                MessageBox.Show("Không thể tìm thấy server. Vui lòng kiểm tra kết nối mạng.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
         public void DisplayPriceIfNeeded()
         {
             if (shouldDisplayPrice)
@@ -129,6 +158,10 @@ namespace WallSheet
 
         private void Client_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (stream != null)
+            {
+                stream.Close();
+            }
             if (client != null)
             {
                 client.Close();

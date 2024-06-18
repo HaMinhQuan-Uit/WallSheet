@@ -17,6 +17,7 @@ namespace WallSheet
     {
         private TcpListener listener;
         private Thread listenThread;
+        private Thread broadcastThread;
         private string serverId;
         private List<TcpClient> clients; // Danh sách các kết nối client
 
@@ -101,6 +102,44 @@ namespace WallSheet
             }
         }
 
+        private void StartBroadcastListener()
+        {
+            UdpClient udpClient = new UdpClient(8889); // Cổng khác để lắng nghe broadcast
+            IPEndPoint remoteEndPoint = new IPEndPoint(IPAddress.Any, 8889);
+
+            try
+            {
+                while (true)
+                {
+                    byte[] receiveBytes = udpClient.Receive(ref remoteEndPoint);
+                    string receivedData = Encoding.ASCII.GetString(receiveBytes);
+
+                    if (receivedData == "DISCOVER_SERVER")
+                    {
+                        byte[] sendBytes = Encoding.ASCII.GetBytes(GetLocalIPAddress());
+                        udpClient.Send(sendBytes, sendBytes.Length, remoteEndPoint);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                AppendToChatLog($"Error in broadcast listener: {ex.Message}");
+            }
+        }
+
+        private string GetLocalIPAddress()
+        {
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (var ip in host.AddressList)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    return ip.ToString();
+                }
+            }
+            throw new Exception("No network adapters with an IPv4 address in the system!");
+        }
+
         private void ShowWinForm()
         {
             // Hiển thị form chiến thắng
@@ -131,6 +170,10 @@ namespace WallSheet
             listenThread = new Thread(new ThreadStart(StartServer));
             listenThread.Start();
             RandomizeHostJob();
+
+            // Khởi động broadcast listener
+            broadcastThread = new Thread(new ThreadStart(StartBroadcastListener));
+            broadcastThread.Start();
         }
 
         private void Host_FormClosing(object sender, FormClosingEventArgs e)
@@ -143,6 +186,11 @@ namespace WallSheet
             if (listenThread != null && listenThread.IsAlive)
             {
                 listenThread.Abort();
+            }
+
+            if (broadcastThread != null && broadcastThread.IsAlive)
+            {
+                broadcastThread.Abort();
             }
         }
 
@@ -193,12 +241,19 @@ namespace WallSheet
             }
         }
 
+        // Các phương thức xử lý sự kiện cho các controls khác
+
         private void label1_Click(object sender, EventArgs e) { }
 
         private void textBox1_TextChanged(object sender, EventArgs e) { }
 
         private void textBox2_TextChanged(object sender, EventArgs e) { }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Xử lý sự kiện khi button2 được nhấn
+            // (nếu có)
+        }
 
         public double textBox3
         {
@@ -214,8 +269,6 @@ namespace WallSheet
             Random random = new Random();
             double x = random.NextDouble() * (200 - 1) + 1;
             nextPrice.Text = x.ToString();
-            // Send the price to clients but they will display it only after receiving the DISPLAY_PRICE command
-            SendPriceToClients(x);
         }
 
         private void SendPriceToClients(double price)
