@@ -56,6 +56,7 @@
             this.Name = "ResetPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reset Password";
+            this.Load += new System.EventHandler(this.ResetPassword_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

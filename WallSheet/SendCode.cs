@@ -1,12 +1,13 @@
-﻿using FireSharp.Config;
+﻿using Firebase_Project;
+using FireSharp.Config;
 using FireSharp.Interfaces;
 using FireSharp.Response;
 using System;
+using System.Net.Mail;
+using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Twilio;
-using Twilio.Types;
-using Twilio.Rest.Api.V2010.Account;
+
 
 namespace WallSheet
 {
@@ -19,20 +20,11 @@ namespace WallSheet
         };
         IFirebaseClient client;
 
-        private async Task<bool> IsPhoneNumberExistsAsync(string phoneNumber)
+        private async Task<bool> IsEmailExistsAsync(string email)
         {
-            try
-            {
-                FirebaseResponse response = await client.GetAsync($"users/{phoneNumber}");
-                Console.WriteLine(response.Body); // Debug: Print response body to console
-                return response.Body != "null"; // Kiểm tra số điện thoại có tồn tại trong Firebase hay không
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error checking phone number: {ex.Message}");
-                return false;
-            }
+            return await MyUser.IsEmailExistsAsync(email);
         }
+
 
         string randomcode;
         public static string to;
@@ -62,45 +54,52 @@ namespace WallSheet
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            // Kiểm tra số điện thoại tồn tại trong Firebase trước khi gửi mã
-            if (await IsPhoneNumberExistsAsync(textBox2.Text))
+            // Kiểm tra email tồn tại trong Firebase trước khi gửi mã
+            if (await IsEmailExistsAsync(textBox2.Text))
             {
-                Random rand = new Random();
-                randomcode = rand.Next(999999).ToString();
+                // Tạo mã OTP và lưu vào biến randomcode của lớp SendCode
+                randomcode = new Random().Next(100000, 999999).ToString();
                 to = textBox2.Text;
+                string from = "tamuitk17@gmail.com";
+                string pass = "ljxm ojff ouhb qkiz";
+                string messagebody = $"Your Reset Code is {randomcode}";
+
+                MailMessage message = new MailMessage();
+                message.To.Add(to);
+                message.From = new MailAddress(from);
+                message.Body = messagebody;
+                message.Subject = "Password Reset Code";
+
+                SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+                smtp.EnableSsl = true;
+                smtp.Port = 587;
+                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                smtp.Credentials = new NetworkCredential(from, pass);
 
                 try
                 {
-                    // Thiết lập thông tin Twilio
-                    const string accountSid = "AC38673cff4b323cdf25a2f402d5d52b11";
-                    const string authToken = "ee10373a5082a0efebcac7ac2c8f850a";
-                    TwilioClient.Init(accountSid, authToken);
-
-                    // Gửi tin nhắn SMS chứa mã xác nhận
-                    var message = MessageResource.Create(
-                        body: $"Your Reset Code is {randomcode}",
-                        from: new PhoneNumber("+14235152216"),
-                        to: new PhoneNumber(to)
-                    );
-
+                    smtp.Send(message);
                     MessageBox.Show("Code Successfully Sent");
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show($"Failed to send code. Error: {ex.Message}");
                 }
             }
             else
             {
-                MessageBox.Show("Số điện thoại không tồn tại trong hệ thống!");
+                MessageBox.Show("Email không tồn tại trong hệ thống!");
             }
         }
+
+
 
         // SendCode.cs
         private void button2_Click(object sender, EventArgs e)
         {
             // Thực hiện kiểm tra mã khi người dùng nhập mã và ấn nút "Xác nhận"
-            if (randomcode == textBox1.Text)
+            if (!string.IsNullOrEmpty(randomcode) && !string.IsNullOrEmpty(textBox1.Text) &&
+    randomcode.Trim() == textBox1.Text.Trim())
             {
                 to = textBox2.Text;
                 ResetPassword rp = new ResetPassword(to); // Truyền số điện thoại cho form ResetPassword

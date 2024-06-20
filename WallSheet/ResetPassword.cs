@@ -9,7 +9,7 @@ namespace WallSheet
 {
     public partial class ResetPassword : Form
     {
-        private string phoneNumber;
+        private string email;
 
         IFirebaseConfig ifc = new FirebaseConfig()
         {
@@ -18,10 +18,10 @@ namespace WallSheet
         };
         IFirebaseClient client;
 
-        public ResetPassword(string phoneNumber)
+        public ResetPassword(string email)
         {
             InitializeComponent();
-            this.phoneNumber = phoneNumber;
+            this.email = email;
             InitializeFirebase();
         }
 
@@ -51,7 +51,7 @@ namespace WallSheet
                 try
                 {
                     var data = new { password = newPassword };
-                    FirebaseResponse response = await client.UpdateAsync($"users/{phoneNumber}/password", data);
+                    FirebaseResponse response = await client.UpdateAsync($"users/{email}/password", data);
                     if (response.StatusCode == System.Net.HttpStatusCode.OK)
                     {
                         MessageBox.Show("Password updated successfully");
@@ -71,6 +71,11 @@ namespace WallSheet
             {
                 MessageBox.Show("Please enter a new password");
             }
+        }
+
+        private void ResetPassword_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
