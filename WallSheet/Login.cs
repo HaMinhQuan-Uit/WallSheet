@@ -115,8 +115,10 @@ namespace WallSheet
                 btnLogin_click_Click(sender, e);
             }
         }
-        
 
-
+        private void txbUserName_TextChanged(object sender, EventArgs e)
+        {
+            txbUserName.Text = "";
+        }
     }
 }

@@ -127,6 +127,17 @@ namespace WallSheet
             btn.Click += Btn_LogOut_Click;
             panel4.Controls.Add(btn);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            openFileDialog.Title = "Chọn ảnh đại diện";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image = new Bitmap(openFileDialog.FileName);
+            }
+        }
     }
 }
 

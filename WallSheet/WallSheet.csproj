@@ -314,6 +314,27 @@
   <ItemGroup>
     <None Include="Resources\Screenshot 2024-06-14 2334371.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-online-gaming-enthusiast-a-3d-image-of-a-youthful-gamer-playing-image_3648787.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-06-15 090659.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-06-15 0906591.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-06-15 091113.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-06-15 091406.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-06-15 091606.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-online-gaming-enthusiast-a-3d-image-of-a-youthful-gamer-playing-image_36487871.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
