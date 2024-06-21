@@ -264,6 +264,7 @@ namespace WallSheet
             Random random = new Random();
             double x = random.NextDouble() * (200 - 1) + 1;
             nextPrice.Text = x.ToString();
+            SendPriceToClients(x);
         }
 
         private void SendPriceToClients(double price)
