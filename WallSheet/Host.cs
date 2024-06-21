@@ -249,11 +249,6 @@ namespace WallSheet
 
         private void textBox2_TextChanged(object sender, EventArgs e) { }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            // Xử lý sự kiện khi button2 được nhấn
-            // (nếu có)
-        }
 
         public double textBox3
         {
