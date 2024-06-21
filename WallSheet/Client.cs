@@ -189,16 +189,43 @@ namespace WallSheet
 
         private void HandleSell()
         {
-            int a = int.Parse(textBox5.Text);
-            double x = double.Parse(hiddenPrice.Text); // Use hiddenPrice value
-            double z = double.Parse(Budget.Text);
-            int y = int.Parse(Quantity.Text);
-            int m = int.Parse(Turn.Text);
-
-            if (y - a >= 0)
+            if (int.TryParse(textBox5.Text, out int a) &&
+                double.TryParse(hiddenPrice.Text, out double x) &&
+                double.TryParse(Budget.Text, out double z) &&
+                int.TryParse(Quantity.Text, out int y) &&
+                int.TryParse(Turn.Text, out int m))
             {
-                z = z + a * x;
-                y = y - a;
+                if (y - a >= 0)
+                {
+                    z += a * x;
+                    y -= a;
+                    m--;
+
+                    UpdateUI(x, z, y, m);
+                    turn++;
+                    CheckWinLose(z, m);
+                }
+                else
+                {
+                    MessageBox.Show("Cannot sell more than the current quantity.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid input detected. Please check your inputs and try again.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void HandleBuy()
+        {
+            if (int.TryParse(textBox5.Text, out int a) &&
+                double.TryParse(hiddenPrice.Text, out double x) &&
+                double.TryParse(Budget.Text, out double z) &&
+                int.TryParse(Quantity.Text, out int y) &&
+                int.TryParse(Turn.Text, out int m))
+            {
+                z -= a * x;
+                y += a;
                 m--;
 
                 UpdateUI(x, z, y, m);
@@ -207,25 +234,8 @@ namespace WallSheet
             }
             else
             {
-                MessageBox.Show("Cannot sell more than the current quantity.");
+                MessageBox.Show("Invalid input detected. Please check your inputs and try again.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void HandleBuy()
-        {
-            int a = int.Parse(textBox5.Text);
-            double x = double.Parse(hiddenPrice.Text); // Use hiddenPrice value
-            double z = double.Parse(Budget.Text);
-            int y = int.Parse(Quantity.Text);
-            int m = int.Parse(Turn.Text);
-
-            z = z - a * x;
-            y = y + a;
-            m--;
-
-            UpdateUI(x, z, y, m);
-            turn++;
-            CheckWinLose(z, m);
         }
 
         private void UpdateUI(double price, double budget, int quantity, int turn)
