@@ -67,6 +67,15 @@ namespace WallSheet
                     string message = Encoding.ASCII.GetString(buffer, 0, bytesRead);
                     AppendToChatLog($"Client: {message}");
 
+                    // Check for specific messages to re-enable the Show button
+                    if (message == "ACTION_TAKEN")
+                    {
+                        this.Invoke((MethodInvoker)delegate
+                        {
+                            Show.Enabled = true; // Re-enable the Show button
+                        });
+                    }
+                    // Existing code for WIN/LOSE handling...
                     if (message == "WIN")
                     {
                         if (textBox4.Text == "Good Stock Broker")
@@ -265,6 +274,7 @@ namespace WallSheet
             double x = random.NextDouble() * (200 - 1) + 1;
             nextPrice.Text = x.ToString();
             SendPriceToClients(x);
+            Show.Enabled = false; // Disable the Show button after sending the price
         }
 
         private void SendPriceToClients(double price)

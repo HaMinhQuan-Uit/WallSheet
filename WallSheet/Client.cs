@@ -118,6 +118,9 @@ namespace WallSheet
                             {
                                 hiddenPrice.Text = price.ToString("F2");
                                 shouldDisplayPrice = true; // Set the flag to true
+                                // Re-enable buttons when a new price is received
+                                button1.Enabled = true;
+                                button2.Enabled = true;
                             });
                         }
                     }
@@ -180,11 +183,17 @@ namespace WallSheet
         private void button1_Click(object sender, EventArgs e)
         {
             HandleSell();
+            button1.Enabled = false; // Disable button 1
+            button2.Enabled = false; // Disable button 2
+            SendMessageToServer("ACTION_TAKEN");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             HandleBuy();
+            button1.Enabled = false; // Disable button 1
+            button2.Enabled = false; // Disable button 2
+            SendMessageToServer("ACTION_TAKEN");
         }
 
         private void HandleSell()

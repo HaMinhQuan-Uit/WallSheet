@@ -57,7 +57,7 @@
             // txtChatLog
             // 
             this.txtChatLog.Location = new System.Drawing.Point(26, 334);
-            this.txtChatLog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtChatLog.Margin = new System.Windows.Forms.Padding(2);
             this.txtChatLog.Multiline = true;
             this.txtChatLog.Name = "txtChatLog";
             this.txtChatLog.Size = new System.Drawing.Size(270, 155);
@@ -66,7 +66,7 @@
             // txtMessage
             // 
             this.txtMessage.Location = new System.Drawing.Point(26, 493);
-            this.txtMessage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMessage.Margin = new System.Windows.Forms.Padding(2);
             this.txtMessage.Multiline = true;
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.Size = new System.Drawing.Size(217, 37);
@@ -77,7 +77,7 @@
             this.btnSend.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSend.BackgroundImage")));
             this.btnSend.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSend.Location = new System.Drawing.Point(247, 493);
-            this.btnSend.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSend.Margin = new System.Windows.Forms.Padding(2);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(48, 37);
             this.btnSend.TabIndex = 3;
@@ -87,7 +87,7 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(158, 2);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(85, 24);
             this.button4.TabIndex = 31;
@@ -228,11 +228,11 @@
             // 
             // hiddenPrice
             // 
-            this.hiddenPrice.Location = new System.Drawing.Point(26, 182);
-            this.hiddenPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.hiddenPrice.Location = new System.Drawing.Point(26, 171);
+            this.hiddenPrice.Margin = new System.Windows.Forms.Padding(2);
             this.hiddenPrice.Name = "hiddenPrice";
             this.hiddenPrice.ReadOnly = true;
-            this.hiddenPrice.Size = new System.Drawing.Size(76, 20);
+            this.hiddenPrice.Size = new System.Drawing.Size(134, 20);
             this.hiddenPrice.TabIndex = 32;
             this.hiddenPrice.Visible = false;
             this.hiddenPrice.TextChanged += new System.EventHandler(this.hiddenPrice_TextChanged);
@@ -261,7 +261,7 @@
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.txtMessage);
             this.Controls.Add(this.txtChatLog);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Client";
             this.Text = "Client";
             this.Load += new System.EventHandler(this.Client_Load);

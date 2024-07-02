@@ -168,30 +168,7 @@ namespace WallSheet
                 this.Close();
             }
         }
-        private void SkipTurn()
-        {
-            // Increment the turn counter
-            turn++;
-            int m = int.Parse(Turn.Text);
-            m--;
-            // Add a new data point with the current budget
-            double z = double.Parse(Budget.Text);
-            dataPoints.Add(new KeyValuePair<int, double>(turn, z));
-
-            // Update the chart with the full list of data points
-            UpdateChart(dataPoints);
-
-            // Update the turn text box
-            Turn.Text = m.ToString();
-        }
-        private void button3_Click(object sender, EventArgs e)
-        {
-            SkipTurn();
-            int m = int.Parse(Turn.Text);
-            double z = double.Parse(Budget.Text);
-            Budget.Text = z.ToString();
-            CheckWinLose(z, m);
-        }
+    
 
         private void button4_Click(object sender, EventArgs e)
         {
