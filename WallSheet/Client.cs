@@ -187,24 +187,6 @@ namespace WallSheet
             HandleBuy();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            SkipTurn();
-        }
-        private void SkipTurn()
-        {
-            turn++;
-            int m = int.Parse(Turn.Text);
-            m--;
-            double x = double.Parse(hiddenPrice.Text); // Use hiddenPrice value
-            double z = double.Parse(Budget.Text);
-            dataPoints.Add(new KeyValuePair<int, double>(turn, z));
-            UpdateChart(dataPoints);
-            Turn.Text = m.ToString();
-            Price.Text = x.ToString();
-            Budget.Text = z.ToString();
-            CheckWinLose(z, m);
-        }
         private void HandleSell()
         {
             int a = int.Parse(textBox5.Text);
