@@ -133,6 +133,12 @@
     <Compile Include="Client.Designer.cs">
       <DependentUpon>Client.cs</DependentUpon>
     </Compile>
+    <Compile Include="EndTran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EndTran.Designer.cs">
+      <DependentUpon>EndTran.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fold.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     </Compile>
     <EmbeddedResource Include="Client.resx">
       <DependentUpon>Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EndTran.resx">
+      <DependentUpon>EndTran.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fold.resx">
       <DependentUpon>Fold.cs</DependentUpon>

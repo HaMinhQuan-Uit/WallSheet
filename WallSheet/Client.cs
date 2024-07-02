@@ -124,6 +124,17 @@ namespace WallSheet
                             });
                         }
                     }
+                    string message1 = Encoding.ASCII.GetString(buffer, 0, bytesRead);
+                    if (message1 == "END_SESSION")
+                    {
+                        this.Invoke((MethodInvoker)delegate
+                        {
+                            this.Hide(); // Hide the Client form
+                            EndTran endTranForm = new EndTran();
+                            endTranForm.Show(); // Show the EndTran form for the client
+                        });
+                        return; // Exit the loop since the session is ending
+                    }
                     else
                     {
                         AppendToChatLog($"Server: {message}");
@@ -185,7 +196,7 @@ namespace WallSheet
             HandleSell();
             button1.Enabled = false; // Disable button 1
             button2.Enabled = false; // Disable button 2
-            SendMessageToServer("ACTION_TAKEN");
+            SendMessageToServer("Tôi đã bán");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -193,7 +204,7 @@ namespace WallSheet
             HandleBuy();
             button1.Enabled = false; // Disable button 1
             button2.Enabled = false; // Disable button 2
-            SendMessageToServer("ACTION_TAKEN");
+            SendMessageToServer("Tôi đã mua");
         }
 
         private void HandleSell()

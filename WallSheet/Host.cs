@@ -81,10 +81,12 @@ namespace WallSheet
                         if (textBox4.Text == "Good Stock Broker")
                         {
                             ShowWinForm();
+                            this.Close();
                         }
                         else
                         {
                             ShowLoseForm();
+                            this.Close();
                         }
                     }
                     else if (message == "LOSE")
@@ -92,10 +94,12 @@ namespace WallSheet
                         if (textBox4.Text == "Good Stock Broker")
                         {
                             ShowLoseForm();
+                            this.Close();
                         }
                         else
                         {
                             ShowWinForm();
+                            this.Close();
                         }
                     }
                 }
@@ -295,7 +299,30 @@ namespace WallSheet
                 }
             }
         }
-       
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SendSpecialMessageToClients("END_SESSION");
+            this.Hide(); // Hide the Host form
+            EndTran endTranForm = new EndTran();
+            endTranForm.Show(); // Show the EndTran form for the host
+        }
+        private void SendSpecialMessageToClients(string message)
+        {
+            byte[] buffer = Encoding.ASCII.GetBytes(message);
+            foreach (var client in clients)
+            {
+                try
+                {
+                    NetworkStream stream = client.GetStream();
+                    stream.Write(buffer, 0, buffer.Length);
+                }
+                catch (Exception)
+                {
+                    // Handle client disconnection if necessary
+                }
+            }
+        }
     }
 }
 

@@ -60,6 +60,7 @@
             this.txtChatLog.Margin = new System.Windows.Forms.Padding(2);
             this.txtChatLog.Multiline = true;
             this.txtChatLog.Name = "txtChatLog";
+            this.txtChatLog.ReadOnly = true;
             this.txtChatLog.Size = new System.Drawing.Size(270, 155);
             this.txtChatLog.TabIndex = 1;
             // 
