@@ -75,33 +75,10 @@ namespace WallSheet
                             Show.Enabled = true; // Re-enable the Show button
                         });
                     }
-
                     // Existing code for WIN/LOSE handling...
-                    if (message == "WIN")
+                    else if (message == "WIN" || message == "LOSE")
                     {
-                        if (textBox4.Text == "Good Stock Broker")
-                        {
-                            ShowWinForm();
-                            this.Close();
-                        }
-                        else
-                        {
-                            ShowLoseForm();
-                            this.Close();
-                        }
-                    }
-                    else if (message == "LOSE")
-                    {
-                        if (textBox4.Text == "Good Stock Broker")
-                        {
-                            ShowLoseForm();
-                            this.Close();
-                        }
-                        else
-                        {
-                            ShowWinForm();
-                            this.Close();
-                        }
+                        HandleWinLoseMessage(message);
                     }
                 }
             }
@@ -114,6 +91,37 @@ namespace WallSheet
                 clients.Remove(client); // Loại bỏ client khỏi danh sách khi ngắt kết nối
                 client.Close();
             }
+        }
+        private void HandleWinLoseMessage(string message)
+        {
+            // Check the role of the host and the message to decide which form to show
+            bool isGoodStockBroker = textBox4.Text == "Good Stock Broker";
+
+            if (message == "WIN")
+            {
+                if (isGoodStockBroker)
+                {
+                    ShowWinForm();
+                }
+                else
+                {
+                    ShowLoseForm();
+                }
+            }
+            else if (message == "LOSE")
+            {
+                if (isGoodStockBroker)
+                {
+                    ShowLoseForm();
+                }
+                else
+                {
+                    ShowWinForm();
+                }
+            }
+
+            // Close the host form after showing the win or lose form
+            this.Invoke(new Action(() => this.Close()));
         }
 
         private void StartBroadcastListener()
@@ -303,26 +311,7 @@ namespace WallSheet
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SendSpecialMessageToClients("END_SESSION");
-            this.Hide(); // Hide the Host form
-            EndTran endTranForm = new EndTran();
-            endTranForm.Show(); // Show the EndTran form for the host
-        }
-        private void SendSpecialMessageToClients(string message)
-        {
-            byte[] buffer = Encoding.ASCII.GetBytes(message);
-            foreach (var client in clients)
-            {
-                try
-                {
-                    NetworkStream stream = client.GetStream();
-                    stream.Write(buffer, 0, buffer.Length);
-                }
-                catch (Exception)
-                {
-                    // Handle client disconnection if necessary
-                }
-            }
+
         }
     }
 }
