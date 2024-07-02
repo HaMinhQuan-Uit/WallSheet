@@ -1,23 +1,34 @@
 {
   "Version": 1,
-<<<<<<< HEAD
   "WorkspaceRootPath": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\host.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\pve_random.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:pve_random.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|e:\\study\\nt106_ltm\\doan3\\wallsheet\\wallsheet\\host.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:host.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\myuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:myuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\profilename.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:profilename.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\profilename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:profilename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\formwin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:formwin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|e:\\study\\nt106_ltm\\doan3\\wallsheet\\wallsheet\\profilename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:profilename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\pve_random.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:pve_random.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\pvp_select.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -38,18 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\myuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:myuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\profilename.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:profilename.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\pve_random.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -77,45 +76,7 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\resetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-=======
-  "WorkspaceRootPath": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet\\WallSheet\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|c:\\users\\nguyenducthanh\\source\\repos\\wallsheet\\wallsheet\\host.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:host.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|c:\\users\\nguyenducthanh\\source\\repos\\wallsheet\\wallsheet\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|c:\\users\\nguyenducthanh\\source\\repos\\wallsheet\\wallsheet\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|c:\\users\\nguyenducthanh\\source\\repos\\wallsheet\\wallsheet\\host.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:host.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|c:\\users\\nguyenducthanh\\source\\repos\\wallsheet\\wallsheet\\resetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
->>>>>>> 0b6578b78eebe7f3f703bc35f2f2b5f6ea3452d4
       "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:resetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet\\WallSheet\\myuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:myuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet\\WallSheet\\resetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:resetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet\\WallSheet\\sendcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:sendcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet\\WallSheet\\sendcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:sendcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -125,12 +86,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< HEAD
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "ProfileName.cs",
               "DocumentMoniker": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\ProfileName.cs",
               "RelativeDocumentMoniker": "ProfileName.cs",
@@ -143,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "ProfileName.cs [Design]",
               "DocumentMoniker": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\ProfileName.cs",
               "RelativeDocumentMoniker": "ProfileName.cs",
@@ -155,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
               "Title": "ProfileName.Designer.cs",
               "DocumentMoniker": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\ProfileName.Designer.cs",
               "RelativeDocumentMoniker": "ProfileName.Designer.cs",
@@ -163,76 +123,25 @@
               "RelativeToolTip": "ProfileName.Designer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T15:32:32.942Z"
+              "WhenOpened": "2024-06-14T15:32:32.942Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "MyUser.cs",
               "DocumentMoniker": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\MyUser.cs",
               "RelativeDocumentMoniker": "MyUser.cs",
               "ToolTip": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\MyUser.cs",
               "RelativeToolTip": "MyUser.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAswDEAAAANAAAA",
+              "ViewState": "AQIAABcAAAAAAAAAAAAswDEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T06:14:18.085Z"
-=======
-          "SelectedChildIndex": 8,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{26341fe2-71dd-46fd-bb1b-2e51a92a0d64}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Client.cs",
-              "DocumentMoniker": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet\\WallSheet\\Client.cs",
-              "RelativeDocumentMoniker": "Client.cs",
-              "ToolTip": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet\\WallSheet\\Client.cs",
-              "RelativeToolTip": "Client.cs",
-              "ViewState": "AQIAADEBAAAAAAAAAAAUwEUBAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T15:07:15.238Z",
+              "WhenOpened": "2024-05-17T06:14:18.085Z",
               "EditorCaption": ""
->>>>>>> 0b6578b78eebe7f3f703bc35f2f2b5f6ea3452d4
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Client.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet\\WallSheet\\Client.cs",
-              "RelativeDocumentMoniker": "Client.cs",
-              "ToolTip": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet\\WallSheet\\Client.cs [Design]",
-              "RelativeToolTip": "Client.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T15:07:13.258Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-<<<<<<< HEAD
               "Title": "Host.cs [Design]",
               "DocumentMoniker": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\Host.cs",
               "RelativeDocumentMoniker": "Host.cs",
@@ -244,7 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 1,
               "Title": "Registration.cs",
               "DocumentMoniker": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\Registration.cs",
               "RelativeDocumentMoniker": "Registration.cs",
@@ -252,11 +161,12 @@
               "RelativeToolTip": "Registration.cs",
               "ViewState": "AQIAAJwAAAAAAAAAAAAowKAAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T06:40:26.378Z"
+              "WhenOpened": "2024-05-17T06:40:26.378Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "PVE_random.cs [Design]",
               "DocumentMoniker": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\PVE_random.cs",
               "RelativeDocumentMoniker": "PVE_random.cs",
@@ -264,58 +174,33 @@
               "RelativeToolTip": "PVE_random.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-14T15:18:53.495Z",
-=======
-              "Title": "Host.cs",
-              "DocumentMoniker": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet\\WallSheet\\Host.cs",
-              "RelativeDocumentMoniker": "Host.cs",
-              "ToolTip": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet\\WallSheet\\Host.cs",
-              "RelativeToolTip": "Host.cs",
-              "ViewState": "AQIAAAsBAAAAAAAAAAAAACQBAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T14:55:56.293Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Host.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet\\WallSheet\\Host.cs",
-              "RelativeDocumentMoniker": "Host.cs",
-              "ToolTip": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet\\WallSheet\\Host.cs [Design]",
-              "RelativeToolTip": "Host.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T14:55:53.534Z",
->>>>>>> 0b6578b78eebe7f3f703bc35f2f2b5f6ea3452d4
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-<<<<<<< HEAD
+              "DocumentIndex": 7,
               "Title": "PVP_select.cs [Design]",
               "DocumentMoniker": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\PVP_select.cs",
               "RelativeDocumentMoniker": "PVP_select.cs",
               "ToolTip": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\PVP_select.cs [Design]",
               "RelativeToolTip": "PVP_select.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T05:30:50.24Z",
-              "EditorCaption": " [Design]"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-06-11T05:30:50.24Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "FormWin.cs [Design]",
               "DocumentMoniker": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\FormWin.cs",
               "RelativeDocumentMoniker": "FormWin.cs",
               "ToolTip": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\FormWin.cs [Design]",
               "RelativeToolTip": "FormWin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T07:07:16.198Z",
-              "EditorCaption": " [Design]"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-06-06T07:07:16.198Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "Login.cs [Design]",
               "DocumentMoniker": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\Login.cs",
               "RelativeDocumentMoniker": "Login.cs",
@@ -326,18 +211,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Registration.cs [Design]",
               "DocumentMoniker": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\Registration.cs",
               "RelativeDocumentMoniker": "Registration.cs",
               "ToolTip": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\Registration.cs [Design]",
               "RelativeToolTip": "Registration.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T01:45:09.238Z"
+              "WhenOpened": "2024-06-15T01:45:09.238Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Login.cs",
               "DocumentMoniker": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\Login.cs",
               "RelativeDocumentMoniker": "Login.cs",
@@ -370,7 +256,8 @@
               "RelativeToolTip": ".Designer.cs",
               "ViewState": "AQIAAJEAAAAAAAAAAAAwwKQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T06:58:49.388Z"
+              "WhenOpened": "2024-06-06T06:58:49.388Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -381,9 +268,8 @@
               "ToolTip": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\Host.cs",
               "RelativeToolTip": "Host.cs",
               "ViewState": "AQIAAGcAAAAAAAAAAAAYwMcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T16:32:38.159Z",
-              "EditorCaption": ""
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-06-10T16:32:38.159Z"
             },
             {
               "$type": "Document",
@@ -405,9 +291,8 @@
               "ToolTip": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\PVP_select.cs",
               "RelativeToolTip": "PVP_select.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T05:30:51.248Z",
-              "EditorCaption": ""
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-06-11T05:30:51.248Z"
             },
             {
               "$type": "Document",
@@ -423,69 +308,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 18,
-=======
->>>>>>> 0b6578b78eebe7f3f703bc35f2f2b5f6ea3452d4
               "Title": "ResetPassword.cs",
-              "DocumentMoniker": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet\\WallSheet\\ResetPassword.cs",
+              "DocumentMoniker": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\ResetPassword.cs",
               "RelativeDocumentMoniker": "ResetPassword.cs",
-<<<<<<< HEAD
               "ToolTip": "E:\\Study\\NT106_LTM\\doan3\\WallSheet\\WallSheet\\ResetPassword.cs",
-=======
-              "ToolTip": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet\\WallSheet\\ResetPassword.cs",
->>>>>>> 0b6578b78eebe7f3f703bc35f2f2b5f6ea3452d4
               "RelativeToolTip": "ResetPassword.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAAAAE4AAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-<<<<<<< HEAD
               "WhenOpened": "2024-06-10T01:03:52.608Z"
-=======
-              "WhenOpened": "2024-06-15T05:01:13.742Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MyUser.cs",
-              "DocumentMoniker": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet\\WallSheet\\MyUser.cs",
-              "RelativeDocumentMoniker": "MyUser.cs",
-              "ToolTip": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet\\WallSheet\\MyUser.cs",
-              "RelativeToolTip": "MyUser.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAQwGkAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T04:42:18.581Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SendCode.cs",
-              "DocumentMoniker": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet\\WallSheet\\SendCode.cs",
-              "RelativeDocumentMoniker": "SendCode.cs",
-              "ToolTip": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet\\WallSheet\\SendCode.cs",
-              "RelativeToolTip": "SendCode.cs",
-              "ViewState": "AQIAAGsAAAAAAAAAAAAwwH4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T04:38:24.676Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ResetPassword.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet\\WallSheet\\ResetPassword.cs",
-              "RelativeDocumentMoniker": "ResetPassword.cs",
-              "ToolTip": "D:\\HK4\\L\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n\\L\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n l\u00FD thuy\u1EBFt\\\u0110\u1ED3 \u00E1n\\ws1\\WallSheet\\ResetPassword.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T04:38:15.086Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SendCode.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet\\WallSheet\\SendCode.cs",
-              "RelativeDocumentMoniker": "SendCode.cs",
-              "ToolTip": "D:\\HK4\\L\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n\\L\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n l\u00FD thuy\u1EBFt\\\u0110\u1ED3 \u00E1n\\ws1\\WallSheet\\SendCode.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T04:38:11.852Z"
->>>>>>> 0b6578b78eebe7f3f703bc35f2f2b5f6ea3452d4
             }
           ]
         }
