@@ -110,29 +110,19 @@ namespace WallSheet
                     string message = Encoding.ASCII.GetString(buffer, 0, bytesRead);
                     if (message.StartsWith("PRICE:"))
                     {
-                        string priceStr = message.Substring("PRICE:".Length); // Declaration and assignment
+                        string priceStr = message.Substring("PRICE:".Length);
                         double price;
                         if (double.TryParse(priceStr, out price))
                         {
                             this.Invoke((MethodInvoker)delegate
                             {
-                                hiddenPrice.Text = priceStr; // Use the already declared variable
+                                hiddenPrice.Text = price.ToString("F2");
                                 shouldDisplayPrice = true; // Set the flag to true
                                 // Re-enable buttons when a new price is received
                                 button1.Enabled = true;
                                 button2.Enabled = true;
                             });
                         }
-                    }
-                    else if (message == "END_SESSION")
-                    {
-                        this.Invoke((MethodInvoker)delegate
-                        {
-                            this.Hide(); // Hide the Client form
-                            EndTran endTranForm = new EndTran();
-                            endTranForm.Show(); // Show the EndTran form for the client
-                        });
-                        return; // Exit the loop since the session is ending
                     }
                     else
                     {
@@ -195,7 +185,7 @@ namespace WallSheet
             HandleSell();
             button1.Enabled = false; // Disable button 1
             button2.Enabled = false; // Disable button 2
-            SendMessageToServer("Tôi đã bán");
+            SendMessageToServer("ACTION_TAKEN");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -203,7 +193,7 @@ namespace WallSheet
             HandleBuy();
             button1.Enabled = false; // Disable button 1
             button2.Enabled = false; // Disable button 2
-            SendMessageToServer("Tôi đã mua");
+            SendMessageToServer("ACTION_TAKEN");
         }
 
         private void HandleSell()

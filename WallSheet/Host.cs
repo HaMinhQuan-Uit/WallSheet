@@ -75,6 +75,7 @@ namespace WallSheet
                             Show.Enabled = true; // Re-enable the Show button
                         });
                     }
+
                     // Existing code for WIN/LOSE handling...
                     if (message == "WIN")
                     {
