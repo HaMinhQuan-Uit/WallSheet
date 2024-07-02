@@ -110,13 +110,13 @@ namespace WallSheet
                     string message = Encoding.ASCII.GetString(buffer, 0, bytesRead);
                     if (message.StartsWith("PRICE:"))
                     {
-                        string priceStr = message.Substring("PRICE:".Length);
+                        string priceStr = message.Substring("PRICE:".Length); // Declaration and assignment
                         double price;
                         if (double.TryParse(priceStr, out price))
                         {
                             this.Invoke((MethodInvoker)delegate
                             {
-                                hiddenPrice.Text = price.ToString("F2");
+                                hiddenPrice.Text = priceStr; // Use the already declared variable
                                 shouldDisplayPrice = true; // Set the flag to true
                                 // Re-enable buttons when a new price is received
                                 button1.Enabled = true;
@@ -124,8 +124,7 @@ namespace WallSheet
                             });
                         }
                     }
-                    string message1 = Encoding.ASCII.GetString(buffer, 0, bytesRead);
-                    if (message1 == "END_SESSION")
+                    else if (message == "END_SESSION")
                     {
                         this.Invoke((MethodInvoker)delegate
                         {

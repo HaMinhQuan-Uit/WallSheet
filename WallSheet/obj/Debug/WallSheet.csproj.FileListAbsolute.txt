@@ -576,3 +576,4 @@ D:\DoAn_1\WallSheet\obj\Debug\WallSheet.csproj.Up2Date
 D:\DoAn_1\WallSheet\obj\Debug\WallSheet.exe
 D:\DoAn_1\WallSheet\obj\Debug\WallSheet.pdb
 D:\DoAn_1\WallSheet\obj\Debug\WallSheet.Fold.resources
+D:\DoAn_1\WallSheet\obj\Debug\WallSheet.EndTran.resources
