@@ -164,16 +164,24 @@ namespace WallSheet
 
         private void ShowWinForm()
         {
-            // Hiển thị form chiến thắng
-            FormWin winForm = new FormWin();
-            winForm.Show();
+            this.Invoke(new Action(() =>
+            {
+                using (FormWin winForm = new FormWin())
+                {
+                    winForm.ShowDialog(); // Use ShowDialog to block the current thread until the form is closed
+                }
+            }));
         }
 
         private void ShowLoseForm()
         {
-            // Hiển thị form thất bại
-            FormLose loseForm = new FormLose();
-            loseForm.Show();
+            this.Invoke(new Action(() =>
+            {
+                using (FormLose loseForm = new FormLose())
+                {
+                    loseForm.ShowDialog(); // Use ShowDialog to block the current thread until the form is closed
+                }
+            }));
         }
 
         private void AppendToChatLog(string message)
