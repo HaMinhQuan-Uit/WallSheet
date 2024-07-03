@@ -65,7 +65,7 @@ namespace WallSheet
                 while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) > 0)
                 {
                     string message = Encoding.ASCII.GetString(buffer, 0, bytesRead);
-                    AppendToChatLog($"Client: {message}");
+                    AppendToChatLog($"Player : {message}");
 
                     // Check for specific messages to re-enable the Show button
                     if (message == "ACTION_TAKEN")
@@ -243,7 +243,7 @@ namespace WallSheet
                     clients.Remove(client);
                 }
 
-                AppendToChatLog($"Server: {message}");
+                AppendToChatLog($"You : {message}");
                 textBox2.Clear(); // Xóa textBox sau khi gửi tin nhắn
             }
         }

@@ -126,7 +126,7 @@ namespace WallSheet
                     }
                     else
                     {
-                        AppendToChatLog($"Server: {message}");
+                        AppendToChatLog($"Player : {message}");
                     }
                 }
             }
@@ -274,7 +274,15 @@ namespace WallSheet
 
         private void CheckWinLose(double budget, int turn)
         {
-            double target = double.Parse(Target.Text);
+            double target;
+
+            // Kiểm tra và chuyển đổi giá trị của Target.Text
+            bool isTargetValid = double.TryParse(Target.Text, out target);
+            if (!isTargetValid)
+            {
+                MessageBox.Show("Invalid target value. Please check the input.");
+                return;
+            }
 
             if (budget >= target)
             {
