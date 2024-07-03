@@ -311,8 +311,35 @@ namespace WallSheet
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            SendCommandToClients("SHOW_ENDTRAN");
+            ShowEndTranForm();
+            this.Close(); // Close the Host form
         }
+
+        private void SendCommandToClients(string command)
+        {
+            byte[] buffer = Encoding.ASCII.GetBytes(command);
+            foreach (var client in clients)
+            {
+                try
+                {
+                    NetworkStream stream = client.GetStream();
+                    stream.Write(buffer, 0, buffer.Length);
+                }
+                catch (Exception)
+                {
+                    // Handle client disconnection if necessary
+                }
+            }
+        }
+
+        private void ShowEndTranForm()
+        {
+            EndTran endTranForm = new EndTran();
+            endTranForm.ShowDialog();
+        }
+
+
     }
 }
 

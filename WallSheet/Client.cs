@@ -118,15 +118,25 @@ namespace WallSheet
                             {
                                 hiddenPrice.Text = price.ToString("F2");
                                 shouldDisplayPrice = true; // Set the flag to true
-                                // Re-enable buttons when a new price is received
+                                                           // Re-enable buttons when a new price is received
                                 button1.Enabled = true;
                                 button2.Enabled = true;
                             });
                         }
                     }
+                    else if (message == "SHOW_ENDTRAN") // Check for the SHOW_ENDTRAN command
+                    {
+                        this.Invoke((MethodInvoker)delegate
+                        {
+                            // Show the EndTran form
+                            EndTran endTranForm = new EndTran();
+                            endTranForm.ShowDialog();
+                            this.Close(); // Close the current Client form
+                        });
+                    }
                     else
                     {
-                        AppendToChatLog($"Player : {message}");
+                        AppendToChatLog($"Server: {message}");
                     }
                 }
             }
