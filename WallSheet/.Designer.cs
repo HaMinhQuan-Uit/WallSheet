@@ -56,9 +56,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(87, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(248, 69);
+            this.label1.Size = new System.Drawing.Size(265, 69);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Sign Up";
+            this.label1.Text = "Đăng Ký";
             // 
             // txbUserrName
             // 
@@ -107,7 +107,7 @@
             this.btnReg.Name = "btnReg";
             this.btnReg.Size = new System.Drawing.Size(312, 39);
             this.btnReg.TabIndex = 9;
-            this.btnReg.Text = "Register";
+            this.btnReg.Text = "Đăng Ký";
             this.btnReg.UseVisualStyleBackColor = false;
             this.btnReg.Click += new System.EventHandler(this.btnReg_Click);
             // 

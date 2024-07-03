@@ -69,7 +69,7 @@
             this.btnResgiter_click.Name = "btnResgiter_click";
             this.btnResgiter_click.Size = new System.Drawing.Size(150, 43);
             this.btnResgiter_click.TabIndex = 4;
-            this.btnResgiter_click.Text = "Register";
+            this.btnResgiter_click.Text = "Đăng Ký";
             this.btnResgiter_click.UseVisualStyleBackColor = false;
             this.btnResgiter_click.Click += new System.EventHandler(this.btnResgiter_click_Click);
             // 
@@ -81,7 +81,7 @@
             this.btnLogin_click.Name = "btnLogin_click";
             this.btnLogin_click.Size = new System.Drawing.Size(156, 43);
             this.btnLogin_click.TabIndex = 3;
-            this.btnLogin_click.Text = "Login";
+            this.btnLogin_click.Text = "Đăng Nhập";
             this.btnLogin_click.UseVisualStyleBackColor = false;
             this.btnLogin_click.Click += new System.EventHandler(this.btnLogin_click_Click);
             // 
@@ -91,11 +91,11 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Impact", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.IndianRed;
-            this.label4.Location = new System.Drawing.Point(84, 117);
+            this.label4.Location = new System.Drawing.Point(45, 112);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(169, 75);
+            this.label4.Size = new System.Drawing.Size(308, 75);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Login";
+            this.label4.Text = "Đăng Nhập";
             // 
             // label5
             // 
@@ -105,9 +105,9 @@
             this.label5.ForeColor = System.Drawing.Color.SeaShell;
             this.label5.Location = new System.Drawing.Point(208, 321);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 17);
+            this.label5.Size = new System.Drawing.Size(114, 17);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Forgot Password?";
+            this.label5.Text = "Quên Mật Khẩu";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // button1

@@ -48,7 +48,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(131, 41);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Send Code";
+            this.button1.Text = "Gửi Mã";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -61,7 +61,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(131, 46);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Verify";
+            this.button2.Text = "Đổi";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -73,9 +73,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label2.Location = new System.Drawing.Point(33, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(338, 36);
+            this.label2.Size = new System.Drawing.Size(235, 36);
             this.label2.TabIndex = 3;
-            this.label2.Text = "FORGOT PASSWORD";
+            this.label2.Text = "Quên Mật Khẩu";
             // 
             // label3
             // 
