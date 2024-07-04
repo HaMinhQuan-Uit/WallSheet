@@ -72,17 +72,6 @@ namespace WallSheet
             }
         }
 
-        public void DisplayPriceIfNeeded()
-        {
-            if (shouldDisplayPrice)
-            {
-                this.Invoke((MethodInvoker)delegate
-                {
-                    Price.Text = hiddenPrice.Text; // Now update the Price TextBox
-                    shouldDisplayPrice = false; // Reset the flag
-                });
-            }
-        }
         private void Client_Load(object sender, EventArgs e)
         {
             ConnectToServer();
@@ -99,6 +88,7 @@ namespace WallSheet
             Quantity.Text = quantity.ToString();
         }
         private bool shouldDisplayPrice = false;
+        
         private void ReceiveMessages()
         {
             try
@@ -190,22 +180,6 @@ namespace WallSheet
 
         private void Price_TextChanged(object sender, EventArgs e) { }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            HandleSell();
-            button1.Enabled = false; // Disable button 1
-            button2.Enabled = false; // Disable button 2
-            SendMessageToServer("ACTION_TAKEN");
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            HandleBuy();
-            button1.Enabled = false; // Disable button 1
-            button2.Enabled = false; // Disable button 2
-            SendMessageToServer("ACTION_TAKEN");
-        }
-
         private void HandleSell()
         {
             int a = int.Parse(textBox5.Text);
@@ -245,6 +219,21 @@ namespace WallSheet
             UpdateUI(x, z, y, m);
             turn++;
             CheckWinLose(z, m);
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HandleSell();
+            button1.Enabled = false; // Disable button 1
+            button2.Enabled = false; // Disable button 2
+            SendMessageToServer("ACTION_TAKEN");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            HandleBuy();
+            button1.Enabled = false; // Disable button 1
+            button2.Enabled = false; // Disable button 2
+            SendMessageToServer("ACTION_TAKEN");
         }
 
         private void UpdateUI(double price, double budget, int quantity, int turn)
@@ -315,6 +304,7 @@ namespace WallSheet
         {
             FormLose loseForm = new FormLose();
             loseForm.Show();
+            SendMessageToServer("LOSE");
             this.Close();
         }
 
