@@ -5,4 +5,8 @@ Lập Trình mạng căn bản
 Giảng viên hưỡng dẫn: Trần Hồng Nghi
 Tên đồ án là :The Wolf of Wall Street
 Sử dụng Ngôn Ngữ là : C# winform
-
+## Sinh Viên Thực hành
+Hà Minh Quân 22521177
+Nguyễn Đức Thành
+Nguyễn Đinh Công Thành
+Nguyễn Thanh Tâm
