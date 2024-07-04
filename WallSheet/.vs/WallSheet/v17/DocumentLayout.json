@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\HK4\\L\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n\\L\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n l\u00FD thuy\u1EBFt\\\u0110\u1ED3 \u00E1n\\ws\\WallSheet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|d:\\hk4\\l\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n\\l\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n l\u00FD thuy\u1EBFt\\\u0111\u1ED3 \u00E1n\\ws\\wallsheet\\profilename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:profilename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|d:\\hk4\\l\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n\\l\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n l\u00FD thuy\u1EBFt\\\u0111\u1ED3 \u00E1n\\ws\\wallsheet\\profilename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:profilename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|d:\\hk4\\l\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n\\l\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n l\u00FD thuy\u1EBFt\\\u0111\u1ED3 \u00E1n\\ws\\wallsheet\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|d:\\hk4\\l\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n\\l\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n l\u00FD thuy\u1EBFt\\\u0111\u1ED3 \u00E1n\\ws\\wallsheet\\profilename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:profilename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -51,25 +51,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProfileName.cs [Design]",
+              "Title": "ProfileName.cs",
               "DocumentMoniker": "D:\\HK4\\L\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n\\L\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n l\u00FD thuy\u1EBFt\\\u0110\u1ED3 \u00E1n\\ws\\WallSheet\\ProfileName.cs",
               "RelativeDocumentMoniker": "ProfileName.cs",
-              "ToolTip": "D:\\HK4\\L\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n\\L\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n l\u00FD thuy\u1EBFt\\\u0110\u1ED3 \u00E1n\\ws\\WallSheet\\ProfileName.cs [Design]",
-              "RelativeToolTip": "ProfileName.cs [Design]",
+              "ToolTip": "D:\\HK4\\L\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n\\L\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n l\u00FD thuy\u1EBFt\\\u0110\u1ED3 \u00E1n\\ws\\WallSheet\\ProfileName.cs*",
+              "RelativeToolTip": "ProfileName.cs*",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAMwHYAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T04:14:46.139Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-07-04T04:43:38.383Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Login.cs [Design]",
-              "DocumentMoniker": "D:\\HK4\\L\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n\\L\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n l\u00FD thuy\u1EBFt\\\u0110\u1ED3 \u00E1n\\ws\\WallSheet\\Login.cs",
-              "RelativeDocumentMoniker": "Login.cs",
-              "ToolTip": "D:\\HK4\\L\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n\\L\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n l\u00FD thuy\u1EBFt\\\u0110\u1ED3 \u00E1n\\ws\\WallSheet\\Login.cs [Design]",
-              "RelativeToolTip": "Login.cs [Design]",
+              "Title": "ProfileName.cs [Design]",
+              "DocumentMoniker": "D:\\HK4\\L\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n\\L\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n l\u00FD thuy\u1EBFt\\\u0110\u1ED3 \u00E1n\\ws\\WallSheet\\ProfileName.cs",
+              "RelativeDocumentMoniker": "ProfileName.cs",
+              "ToolTip": "D:\\HK4\\L\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n\\L\u1EADp tr\u00ECnh m\u1EA1ng c\u0103n b\u1EA3n l\u00FD thuy\u1EBFt\\\u0110\u1ED3 \u00E1n\\ws\\WallSheet\\ProfileName.cs [Design]*",
+              "RelativeToolTip": "ProfileName.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T04:28:36.982Z",
+              "WhenOpened": "2024-07-04T04:42:03.699Z",
               "EditorCaption": " [Design]"
             }
           ]

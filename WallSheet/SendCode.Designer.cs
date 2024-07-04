@@ -97,9 +97,9 @@
             this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label4.Location = new System.Drawing.Point(1, 245);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 25);
+            this.label4.Size = new System.Drawing.Size(98, 25);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Enter Code";
+            this.label4.Text = "Nhập mã";
             // 
             // textBox1
             // 

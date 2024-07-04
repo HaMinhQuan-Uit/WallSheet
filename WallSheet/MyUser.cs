@@ -36,11 +36,11 @@ namespace Firebase_Project
                 {
                     throw new Exception("Client is null, failed to create FireSharp client.");
                 }
-                MessageBox.Show("Firebase connection established successfully");
+                
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Failed to initialize Firebase client: {ex.Message}", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"Không thể kết nối tới Firebase client: {ex.Message}", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -109,7 +109,7 @@ namespace Firebase_Project
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error checking email: {ex.Message}");
+                MessageBox.Show($"Lỗi kiểm tra email: {ex.Message}");
                 return false;
             }
         }

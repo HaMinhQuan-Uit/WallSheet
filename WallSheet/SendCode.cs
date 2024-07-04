@@ -44,7 +44,7 @@ namespace WallSheet
                 {
                     throw new Exception("Client is null, failed to create FireSharp client.");
                 }
-                MessageBox.Show("Firebase connection established successfully");
+                
             }
             catch (Exception ex)
             {
@@ -79,11 +79,11 @@ namespace WallSheet
                 try
                 {
                     smtp.Send(message);
-                    MessageBox.Show("Code Successfully Sent");
+                    MessageBox.Show("Mã xác nhận đươc gửi thành công!");
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Failed to send code. Error: {ex.Message}");
+                    MessageBox.Show($"Không thể gửi mã xác nhận. Error: {ex.Message}");
                 }
             }
             else
