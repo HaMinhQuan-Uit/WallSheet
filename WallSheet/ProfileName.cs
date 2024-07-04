@@ -87,17 +87,7 @@ namespace WallSheet
 
         }
         private bool check;
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if (check)
-            {
-                panel1.Width += 10;
-               // if(panel1.Size = panel1.MaximumSize)
-                {
-                    pictureBox1.Left += 200;
-                }
-            }
-        }
+        
 
         private void btnPVE_click_Click(object sender, EventArgs e)
         {
@@ -118,26 +108,13 @@ namespace WallSheet
         private void btnSetting_Click_Click(object sender, EventArgs e)
         {
 
-            Button btn = new Button();
-            btn.Text = " LogOut ";
-            btn.AutoSize = true;
-            btn.Font = new Font("Arial", 12);
-            btn.Location = new Point(panel4.Width - btn.Width - 10, panel4.Height - btn.Height - 10);
-            btn.BackColor = Color.BlueViolet;
-            btn.Click += Btn_LogOut_Click;
-            panel4.Controls.Add(btn);
+            FormLogin formLogin = new FormLogin();
+            formLogin.Show();
+            this.Close();
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
-            openFileDialog.Title = "Chọn ảnh đại diện";
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox1.Image = new Bitmap(openFileDialog.FileName);
-            }
-        }
+        
     }
 }
 

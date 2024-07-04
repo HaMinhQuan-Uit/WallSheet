@@ -95,9 +95,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(15, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 16);
+            this.label1.Size = new System.Drawing.Size(102, 16);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Next Price";
+            this.label1.Text = "Số tiền tiếp theo";
             // 
             // Show
             // 
@@ -124,7 +124,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(331, 76);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(116, 27);
             this.button2.TabIndex = 7;
@@ -146,8 +146,10 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Host";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Host";
             this.Load += new System.EventHandler(this.Host_Load);
             this.ResumeLayout(false);

@@ -353,6 +353,12 @@
   <ItemGroup>
     <None Include="Resources\pngtree-online-gaming-enthusiast-a-3d-image-of-a-youthful-gamer-playing-image_36487871.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\màn đêm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ban dem.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">

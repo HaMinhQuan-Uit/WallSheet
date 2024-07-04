@@ -54,7 +54,7 @@
             this.Price.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.Price.Location = new System.Drawing.Point(13, 265);
-            this.Price.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Price.Margin = new System.Windows.Forms.Padding(4);
             this.Price.Multiline = true;
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;
@@ -67,7 +67,7 @@
             this.Quantity.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.Quantity.Location = new System.Drawing.Point(177, 261);
-            this.Quantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Quantity.Margin = new System.Windows.Forms.Padding(4);
             this.Quantity.Multiline = true;
             this.Quantity.Name = "Quantity";
             this.Quantity.ReadOnly = true;
@@ -80,7 +80,7 @@
             this.Budget.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Budget.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.Budget.Location = new System.Drawing.Point(13, 327);
-            this.Budget.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Budget.Margin = new System.Windows.Forms.Padding(4);
             this.Budget.Multiline = true;
             this.Budget.Name = "Budget";
             this.Budget.ReadOnly = true;
@@ -93,7 +93,7 @@
             this.Target.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Target.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.Target.Location = new System.Drawing.Point(176, 327);
-            this.Target.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Target.Margin = new System.Windows.Forms.Padding(4);
             this.Target.Multiline = true;
             this.Target.Name = "Target";
             this.Target.ReadOnly = true;
@@ -105,6 +105,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Gold;
             this.label1.Location = new System.Drawing.Point(16, 241);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -117,6 +118,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Gold;
             this.label2.Location = new System.Drawing.Point(173, 241);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -129,6 +131,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.Gold;
             this.label3.Location = new System.Drawing.Point(16, 304);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -141,6 +144,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Gold;
             this.label4.Location = new System.Drawing.Point(173, 304);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -152,8 +156,9 @@
             // 
             this.button1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.Location = new System.Drawing.Point(13, 475);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(139, 50);
             this.button1.TabIndex = 8;
@@ -166,7 +171,7 @@
             this.textBox5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.textBox5.Location = new System.Drawing.Point(13, 414);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(199, 41);
@@ -178,7 +183,7 @@
             this.button2.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.button2.Location = new System.Drawing.Point(176, 475);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(135, 50);
             this.button2.TabIndex = 10;
@@ -191,7 +196,7 @@
             this.Turn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Turn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Turn.Location = new System.Drawing.Point(19, 33);
-            this.Turn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Turn.Margin = new System.Windows.Forms.Padding(4);
             this.Turn.Multiline = true;
             this.Turn.Name = "Turn";
             this.Turn.ReadOnly = true;
@@ -219,7 +224,7 @@
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(400, 1);
-            this.chart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chart1.Margin = new System.Windows.Forms.Padding(4);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
@@ -263,8 +268,10 @@
             this.Controls.Add(this.Budget);
             this.Controls.Add(this.Quantity);
             this.Controls.Add(this.Price);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PVE_random";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PVE_random";
             this.Load += new System.EventHandler(this.PVE_random_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();

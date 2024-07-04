@@ -98,12 +98,14 @@
             // 
             // chart1
             // 
+            this.chart1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.chart1.BorderlineColor = System.Drawing.Color.SteelBlue;
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(400, 1);
-            this.chart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chart1.Margin = new System.Windows.Forms.Padding(4);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
@@ -116,6 +118,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Gold;
             this.label5.Location = new System.Drawing.Point(29, 9);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
@@ -126,7 +129,7 @@
             // Turn
             // 
             this.Turn.Location = new System.Drawing.Point(71, 6);
-            this.Turn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Turn.Margin = new System.Windows.Forms.Padding(4);
             this.Turn.Name = "Turn";
             this.Turn.ReadOnly = true;
             this.Turn.Size = new System.Drawing.Size(132, 22);
@@ -135,7 +138,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(156, 174);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(113, 30);
             this.button2.TabIndex = 26;
@@ -146,7 +149,7 @@
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(32, 144);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(180, 22);
             this.textBox5.TabIndex = 25;
@@ -155,7 +158,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(32, 176);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 28);
             this.button1.TabIndex = 24;
@@ -166,6 +169,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Gold;
             this.label4.Location = new System.Drawing.Point(184, 94);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -176,6 +180,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Gold;
             this.label3.Location = new System.Drawing.Point(29, 94);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -186,6 +191,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Gold;
             this.label2.Location = new System.Drawing.Point(184, 48);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -196,6 +202,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Gold;
             this.label1.Location = new System.Drawing.Point(29, 48);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -207,7 +214,7 @@
             // Target
             // 
             this.Target.Location = new System.Drawing.Point(187, 114);
-            this.Target.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Target.Margin = new System.Windows.Forms.Padding(4);
             this.Target.Name = "Target";
             this.Target.ReadOnly = true;
             this.Target.Size = new System.Drawing.Size(132, 22);
@@ -216,7 +223,7 @@
             // Budget
             // 
             this.Budget.Location = new System.Drawing.Point(32, 114);
-            this.Budget.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Budget.Margin = new System.Windows.Forms.Padding(4);
             this.Budget.Name = "Budget";
             this.Budget.ReadOnly = true;
             this.Budget.Size = new System.Drawing.Size(132, 22);
@@ -225,7 +232,7 @@
             // Quantity
             // 
             this.Quantity.Location = new System.Drawing.Point(187, 68);
-            this.Quantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Quantity.Margin = new System.Windows.Forms.Padding(4);
             this.Quantity.Name = "Quantity";
             this.Quantity.ReadOnly = true;
             this.Quantity.Size = new System.Drawing.Size(132, 22);
@@ -234,7 +241,7 @@
             // Price
             // 
             this.Price.Location = new System.Drawing.Point(32, 68);
-            this.Price.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Price.Margin = new System.Windows.Forms.Padding(4);
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;
             this.Price.Size = new System.Drawing.Size(132, 22);
@@ -256,6 +263,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(1077, 673);
             this.Controls.Add(this.hiddenPrice);
             this.Controls.Add(this.button4);
@@ -276,8 +284,10 @@
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.txtMessage);
             this.Controls.Add(this.txtChatLog);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Client";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Client";
             this.Load += new System.EventHandler(this.Client_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();

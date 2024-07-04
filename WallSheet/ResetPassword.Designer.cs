@@ -94,7 +94,9 @@ namespace WallSheet
             this.Controls.Add(this.lblConfirmPassword);
             this.Controls.Add(this.txbNewPassword);
             this.Controls.Add(this.lblNewPassword);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ResetPassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đặt lại mật khẩu";
             this.ResumeLayout(false);
             this.PerformLayout();

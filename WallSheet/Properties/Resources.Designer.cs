@@ -73,6 +73,16 @@ namespace WallSheet.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ban_dem {
+            get {
+                object obj = ResourceManager.GetObject("ban dem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cach_choi_ma_soi_1 {
             get {
                 object obj = ResourceManager.GetObject("cach-choi-ma-soi-1", resourceCulture);
@@ -86,6 +96,16 @@ namespace WallSheet.Properties {
         internal static System.Drawing.Bitmap cach_choi_ma_soi_11 {
             get {
                 object obj = ResourceManager.GetObject("cach-choi-ma-soi-11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap màn_đêm {
+            get {
+                object obj = ResourceManager.GetObject("màn đêm", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
