@@ -2,5 +2,7 @@ Lời Ngỏ:Chào mừng bạn đến ứng dụng của chúng  tớ. Nhưng m�
 
 I. ĐỒ ÁN MÔN HỌC 
 Lập Trình mạng căn bản 
+Giảng viên hưỡng dẫn: Trần Hồng Nghi
 Tên đồ án là :The Wolf of Wall Street
 Sử dụng Ngôn Ngữ là : C# winform
+
