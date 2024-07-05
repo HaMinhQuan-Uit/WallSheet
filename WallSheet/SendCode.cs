@@ -102,7 +102,7 @@ namespace WallSheet
     randomcode.Trim() == textBox1.Text.Trim())
             {
                 to = textBox2.Text;
-                ResetPassword rp = new ResetPassword(to); // Truyền số điện thoại cho form ResetPassword
+                ResetPassword rp = new ResetPassword(to); // Truyền email cho form ResetPassword
                 Hide();
                 rp.Show();
             }
@@ -113,12 +113,7 @@ namespace WallSheet
         }
 
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            Hide();
-            FormLogin formLogin = new FormLogin();
-            formLogin.Show();
-        }
+      
 
         private void SendCode_Load(object sender, EventArgs e)
         {

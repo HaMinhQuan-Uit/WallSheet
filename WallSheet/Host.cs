@@ -44,7 +44,7 @@ namespace WallSheet
                 listener = new TcpListener(IPAddress.Any, 8888);
                 listener.Start();
                 serverId = Guid.NewGuid().ToString();
-                AppendToChatLog($"Server started with ID: {serverId}. Waiting for connections...");
+                AppendToChatLog($"You started with ID: {serverId}. Waiting for connections...");
 
                 // Tạo một thread riêng để lắng nghe thông điệp DISCOVER_SERVER qua UDP
                 Thread udpThread = new Thread(HandleUdpBroadcast);

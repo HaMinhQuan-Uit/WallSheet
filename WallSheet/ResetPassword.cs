@@ -38,7 +38,7 @@ namespace WallSheet
                 {
                     throw new Exception("Client is null, failed to create FireSharp client.");
                 }
-                MessageBox.Show("Kết nối Firebase thành công");
+                
             }
             catch (Exception ex)
             {
@@ -119,6 +119,11 @@ namespace WallSheet
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void ResetPassword_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

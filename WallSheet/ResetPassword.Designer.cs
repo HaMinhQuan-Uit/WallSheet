@@ -98,6 +98,7 @@ namespace WallSheet
             this.Name = "ResetPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đặt lại mật khẩu";
+            this.Load += new System.EventHandler(this.ResetPassword_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
