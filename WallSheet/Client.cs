@@ -134,7 +134,7 @@ namespace WallSheet
                     }
                     else
                     {
-                        AppendToChatLog($"Server: {message}");
+                        AppendToChatLog($"Player : {message}");
                     }
                 }
             }
