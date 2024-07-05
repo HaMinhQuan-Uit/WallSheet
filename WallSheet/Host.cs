@@ -39,6 +39,10 @@ namespace WallSheet
                 serverId = Guid.NewGuid().ToString();
                 AppendToChatLog($"Server started with ID: {serverId}. Waiting for connections...");
 
+                // Tạo một thread riêng để lắng nghe thông điệp DISCOVER_SERVER qua UDP
+                Thread udpThread = new Thread(HandleUdpBroadcast);
+                udpThread.Start();
+
                 while (true)
                 {
                     TcpClient client = listener.AcceptTcpClient();
@@ -52,7 +56,21 @@ namespace WallSheet
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        private void HandleUdpBroadcast()
+        {
+            UdpClient udpListener = new UdpClient(8889);
+            IPEndPoint groupEP = new IPEndPoint(IPAddress.Any, 8889);
+            while (true)
+            {
+                byte[] bytes = udpListener.Receive(ref groupEP);
+                string message = Encoding.ASCII.GetString(bytes, 0, bytes.Length);
+                if (message == "DISCOVER_SERVER")
+                {
+                    byte[] responseBytes = Encoding.ASCII.GetBytes(GetLocalIPAddress());
+                    udpListener.Send(responseBytes, responseBytes.Length, groupEP);
+                }
+            }
+        }
         private void HandleClient(object obj)
         {
             TcpClient client = (TcpClient)obj;
@@ -124,30 +142,7 @@ namespace WallSheet
             this.Invoke(new Action(() => this.Close()));
         }
 
-        private void StartBroadcastListener()
-        {
-            UdpClient udpClient = new UdpClient(8889); // Cổng khác để lắng nghe broadcast
-            IPEndPoint remoteEndPoint = new IPEndPoint(IPAddress.Any, 8889);
-
-            try
-            {
-                while (true)
-                {
-                    byte[] receiveBytes = udpClient.Receive(ref remoteEndPoint);
-                    string receivedData = Encoding.ASCII.GetString(receiveBytes);
-
-                    if (receivedData == "DISCOVER_SERVER")
-                    {
-                        byte[] sendBytes = Encoding.ASCII.GetBytes(GetLocalIPAddress());
-                        udpClient.Send(sendBytes, sendBytes.Length, remoteEndPoint);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                AppendToChatLog($"Error in broadcast listener: {ex.Message}");
-            }
-        }
+    
 
         private string GetLocalIPAddress()
         {
@@ -201,9 +196,6 @@ namespace WallSheet
             listenThread.Start();
             RandomizeHostJob();
 
-            // Khởi động broadcast listener
-            broadcastThread = new Thread(new ThreadStart(StartBroadcastListener));
-            broadcastThread.Start();
         }
 
         private void Host_FormClosing(object sender, FormClosingEventArgs e)

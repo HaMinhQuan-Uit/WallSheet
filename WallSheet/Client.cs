@@ -36,12 +36,17 @@ namespace WallSheet
                 string serverIp = DiscoverServer();
                 if (serverIp != null)
                 {
+                    Console.WriteLine("Đang kết nối tới server IP: " + serverIp);
                     client = new TcpClient(serverIp, 8888);
                     stream = client.GetStream();
                     AppendToChatLog("Đã kết nối tới server.");
 
                     receiveThread = new Thread(ReceiveMessages);
                     receiveThread.Start();
+                }
+                else
+                {
+                    Console.WriteLine("Không tìm thấy server IP.");
                 }
             }
             catch (Exception ex)
@@ -57,16 +62,19 @@ namespace WallSheet
 
             byte[] sendBytes = Encoding.ASCII.GetBytes("DISCOVER_SERVER");
             udpClient.Send(sendBytes, sendBytes.Length, endPoint);
+            Console.WriteLine("Đã gửi thông điệp DISCOVER_SERVER qua broadcast.");
 
             udpClient.Client.ReceiveTimeout = 5000;
             try
             {
                 byte[] receiveBytes = udpClient.Receive(ref endPoint);
                 string serverIp = Encoding.ASCII.GetString(receiveBytes);
+                Console.WriteLine("Đã nhận được phản hồi từ server: " + serverIp);
                 return serverIp;
             }
-            catch (SocketException)
+            catch (SocketException ex)
             {
+                Console.WriteLine("Không thể tìm thấy server. Lỗi: " + ex.Message);
                 MessageBox.Show("Không thể tìm thấy server. Vui lòng kiểm tra kết nối mạng.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
