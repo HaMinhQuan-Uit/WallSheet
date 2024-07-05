@@ -32,6 +32,13 @@ namespace WallSheet
 
         private void StartServer()
         {
+            listenThread = new Thread(new ThreadStart(StartListening));
+            listenThread.IsBackground = true;
+            listenThread.Start();
+        }
+
+        private void StartListening()
+        {
             try
             {
                 listener = new TcpListener(IPAddress.Any, 8888);

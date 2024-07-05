@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet11\\WallSheet\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet11\\WallSheet\\host.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:host.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet11\\WallSheet\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet11\\WallSheet\\host.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:host.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet11\\WallSheet\\host.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|solutionrelative:host.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{229ADB17-01BC-4482-A130-FF27EC7D53F3}|WallSheet.csproj|C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet11\\WallSheet\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,20 +70,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Client.cs",
               "DocumentMoniker": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet11\\WallSheet\\Client.cs",
               "RelativeDocumentMoniker": "Client.cs",
               "ToolTip": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet11\\WallSheet\\Client.cs",
               "RelativeToolTip": "Client.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAAwCcAAAA5AAAA",
+              "ViewState": "AQIAABkAAAAAAAAAAAAQwCcAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-05T04:37:31.131Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Client.cs [Design]",
               "DocumentMoniker": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet11\\WallSheet\\Client.cs",
               "RelativeDocumentMoniker": "Client.cs",
@@ -95,26 +95,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Host.cs",
               "DocumentMoniker": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet11\\WallSheet\\Host.cs",
               "RelativeDocumentMoniker": "Host.cs",
               "ToolTip": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet11\\WallSheet\\Host.cs",
               "RelativeToolTip": "Host.cs",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAowDQAAAAvAAAA",
+              "ViewState": "AQIAAEABAAAAAAAAAAA8wEIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T04:35:35.158Z"
+              "WhenOpened": "2024-07-05T04:35:35.158Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Host.cs [Design]",
               "DocumentMoniker": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet11\\WallSheet\\Host.cs",
               "RelativeDocumentMoniker": "Host.cs",
               "ToolTip": "C:\\Users\\nguyenducthanh\\source\\repos\\WallSheet11\\WallSheet\\Host.cs [Design]",
               "RelativeToolTip": "Host.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T04:35:31.388Z"
+              "WhenOpened": "2024-07-05T04:35:31.388Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
