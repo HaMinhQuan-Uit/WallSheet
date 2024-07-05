@@ -29,11 +29,11 @@ namespace WallSheet
         }
 
 
-        private void ConnectToServer()
+        private async void ConnectToServer()
         {
             try
             {
-                string serverIp = DiscoverServer();
+                string serverIp = await DiscoverServerAsync();
                 if (serverIp != null)
                 {
                     Console.WriteLine("Đang kết nối tới server IP: " + serverIp);
@@ -42,6 +42,7 @@ namespace WallSheet
                     AppendToChatLog("Đã kết nối tới server.");
 
                     receiveThread = new Thread(ReceiveMessages);
+                    receiveThread.IsBackground = true;
                     receiveThread.Start();
                 }
                 else
@@ -54,29 +55,32 @@ namespace WallSheet
                 MessageBox.Show($"Lỗi: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private string DiscoverServer()
+
+        private async Task<string> DiscoverServerAsync()
         {
-            UdpClient udpClient = new UdpClient();
-            udpClient.EnableBroadcast = true;
-            IPEndPoint endPoint = new IPEndPoint(IPAddress.Broadcast, 8889);
-
-            byte[] sendBytes = Encoding.ASCII.GetBytes("DISCOVER_SERVER");
-            udpClient.Send(sendBytes, sendBytes.Length, endPoint);
-            Console.WriteLine("Đã gửi thông điệp DISCOVER_SERVER qua broadcast.");
-
-            udpClient.Client.ReceiveTimeout = 5000;
-            try
+            using (UdpClient udpClient = new UdpClient())
             {
-                byte[] receiveBytes = udpClient.Receive(ref endPoint);
-                string serverIp = Encoding.ASCII.GetString(receiveBytes);
-                Console.WriteLine("Đã nhận được phản hồi từ server: " + serverIp);
-                return serverIp;
-            }
-            catch (SocketException ex)
-            {
-                Console.WriteLine("Không thể tìm thấy server. Lỗi: " + ex.Message);
-                MessageBox.Show("Không thể tìm thấy server. Vui lòng kiểm tra kết nối mạng.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
+                udpClient.EnableBroadcast = true;
+                IPEndPoint endPoint = new IPEndPoint(IPAddress.Broadcast, 8889);
+
+                byte[] sendBytes = Encoding.ASCII.GetBytes("DISCOVER_SERVER");
+                await udpClient.SendAsync(sendBytes, sendBytes.Length, endPoint);
+                Console.WriteLine("Đã gửi thông điệp DISCOVER_SERVER qua broadcast.");
+
+                udpClient.Client.ReceiveTimeout = 5000;
+                try
+                {
+                    UdpReceiveResult result = await udpClient.ReceiveAsync();
+                    string serverIp = Encoding.ASCII.GetString(result.Buffer);
+                    Console.WriteLine("Đã nhận được phản hồi từ server: " + serverIp);
+                    return serverIp;
+                }
+                catch (SocketException ex)
+                {
+                    Console.WriteLine("Không thể tìm thấy server. Lỗi: " + ex.Message);
+                    MessageBox.Show("Không thể tìm thấy server. Vui lòng kiểm tra kết nối mạng.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return null;
+                }
             }
         }
 
