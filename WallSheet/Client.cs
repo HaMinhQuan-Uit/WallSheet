@@ -175,10 +175,19 @@ namespace WallSheet
                 receiveThread.Abort();
             }
         }
-
-        private void label1_Click(object sender, EventArgs e) { }
-
         private void Price_TextChanged(object sender, EventArgs e) { }
+
+        private void hiddenPrice_TextChanged(object sender, EventArgs e) { }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            // Check if the textBox5 text is not an integer
+            if (!int.TryParse(textBox5.Text, out _))
+            {
+                // If not, show a warning message
+                MessageBox.Show("Please enter a valid integer number.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
 
         private void HandleSell()
         {
@@ -200,7 +209,7 @@ namespace WallSheet
             }
             else
             {
-                MessageBox.Show("Cannot sell more than the current quantity.");
+                MessageBox.Show("Không thể bán hơn số lượng đang có.");
             }
         }
 
@@ -308,8 +317,6 @@ namespace WallSheet
             this.Close();
         }
 
-        private void textBox5_TextChanged(object sender, EventArgs e) { }
-
         private void SendMessageToServer(string message)
         {
             if (!string.IsNullOrEmpty(message))
@@ -317,11 +324,6 @@ namespace WallSheet
                 byte[] buffer = Encoding.ASCII.GetBytes(message);
                 stream.Write(buffer, 0, buffer.Length);
             }
-        }
-
-        private void hiddenPrice_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

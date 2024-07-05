@@ -45,7 +45,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.Target = new System.Windows.Forms.TextBox();
             this.Budget = new System.Windows.Forms.TextBox();
             this.Quantity = new System.Windows.Forms.TextBox();
@@ -53,13 +52,14 @@
             this.hiddenPrice = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtChatLog
             // 
             this.txtChatLog.Location = new System.Drawing.Point(26, 334);
-            this.txtChatLog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtChatLog.Margin = new System.Windows.Forms.Padding(2);
             this.txtChatLog.Multiline = true;
             this.txtChatLog.Name = "txtChatLog";
             this.txtChatLog.ReadOnly = true;
@@ -69,7 +69,7 @@
             // txtMessage
             // 
             this.txtMessage.Location = new System.Drawing.Point(26, 493);
-            this.txtMessage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMessage.Margin = new System.Windows.Forms.Padding(2);
             this.txtMessage.Multiline = true;
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.Size = new System.Drawing.Size(217, 37);
@@ -80,7 +80,7 @@
             this.btnSend.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSend.BackgroundImage")));
             this.btnSend.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSend.Location = new System.Drawing.Point(247, 493);
-            this.btnSend.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSend.Margin = new System.Windows.Forms.Padding(2);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(48, 37);
             this.btnSend.TabIndex = 3;
@@ -90,7 +90,7 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(158, 2);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(85, 24);
             this.button4.TabIndex = 31;
@@ -192,17 +192,6 @@
             this.label2.TabIndex = 21;
             this.label2.Text = "Số Lượng";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(22, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 13);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Giá";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // Target
             // 
             this.Target.Location = new System.Drawing.Point(140, 93);
@@ -239,7 +228,7 @@
             // hiddenPrice
             // 
             this.hiddenPrice.Location = new System.Drawing.Point(26, 201);
-            this.hiddenPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.hiddenPrice.Margin = new System.Windows.Forms.Padding(2);
             this.hiddenPrice.Name = "hiddenPrice";
             this.hiddenPrice.ReadOnly = true;
             this.hiddenPrice.Size = new System.Drawing.Size(134, 20);
@@ -267,12 +256,23 @@
             this.label7.TabIndex = 34;
             this.label7.Text = "số lượng cần giao dịch";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.Gold;
+            this.label8.Location = new System.Drawing.Point(24, 39);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(23, 13);
+            this.label8.TabIndex = 35;
+            this.label8.Text = "Giá";
+            // 
             // Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(808, 547);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.hiddenPrice);
@@ -286,7 +286,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.Target);
             this.Controls.Add(this.Budget);
             this.Controls.Add(this.Quantity);
@@ -295,7 +294,7 @@
             this.Controls.Add(this.txtMessage);
             this.Controls.Add(this.txtChatLog);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Client";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Client";
@@ -321,7 +320,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Target;
         private System.Windows.Forms.TextBox Budget;
         private System.Windows.Forms.TextBox Quantity;
@@ -329,5 +327,6 @@
         private System.Windows.Forms.TextBox hiddenPrice;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
