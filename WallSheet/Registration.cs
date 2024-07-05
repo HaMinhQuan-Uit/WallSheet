@@ -19,7 +19,7 @@ namespace WallSheet
             InitializeComponent();
             txbPhoneNumber.KeyPress += txbPhoneNumber_KeyPress;
             txbPhoneNumber.KeyPress += txbPhoneNumber_KeyPress;
-            txbConfirmPass.KeyPress += txbPhoneNumber_KeyPress;
+            txbConfirmPass.KeyDown += txbcConfirmPass_KeyDown;
             txbUserrName.KeyDown += txbUserrName_KeyDown;
             txbPassword.KeyDown += txbPassword_KeyDown;
             txbEmail.KeyDown += txbEmail_KeyDown;

@@ -70,7 +70,6 @@
             this.txbPassword.PasswordChar = '*';
             this.txbPassword.Size = new System.Drawing.Size(286, 37);
             this.txbPassword.TabIndex = 6;
-            this.txbPassword.UseSystemPasswordChar = true;
             // 
             // txbEmail
             // 
