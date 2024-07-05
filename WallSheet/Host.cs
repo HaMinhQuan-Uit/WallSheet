@@ -41,6 +41,7 @@ namespace WallSheet
 
                 // Tạo một thread riêng để lắng nghe thông điệp DISCOVER_SERVER qua UDP
                 Thread udpThread = new Thread(HandleUdpBroadcast);
+                udpThread.IsBackground = true;
                 udpThread.Start();
 
                 while (true)
@@ -48,6 +49,7 @@ namespace WallSheet
                     TcpClient client = listener.AcceptTcpClient();
                     clients.Add(client); // Thêm client vào danh sách
                     Thread clientThread = new Thread(new ParameterizedThreadStart(HandleClient));
+                    clientThread.IsBackground = true;
                     clientThread.Start(client);
                 }
             }
